@@ -3,3 +3,4 @@
 *pycache*
 *.db*
 *.env*
+*.sqlite3*
