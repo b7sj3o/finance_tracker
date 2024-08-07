@@ -12,3 +12,12 @@ def register_user(username: str, email: str, password: str):
 
 def check_password(user: User, password: str):
     return bcrypt.checkpw(password.encode('utf-8'), user.password_hash.encode('utf-8'))
+
+def login_user(username: str, password: str):
+    user = get_user(username)
+    if user and check_password(user, password):
+        return True
+    return False
+
+def get_all_users():
+    return db_session.query(User).all()

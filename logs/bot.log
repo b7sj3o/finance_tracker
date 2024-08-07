@@ -1,0 +1,1436 @@
+2024-08-06 11:40:11,864 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 11:40:11,864 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 11:40:11,967 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 11:40:19,064 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 11:40:19,064 - aiogram.event - INFO - Update id=348068601 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:17:56,652 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:17:56,653 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:17:56,750 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:18:02,445 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:18:02,445 - aiogram.event - INFO - Update id=348068602 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:26:06,539 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:29:17,569 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:31:45,585 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:31:45,586 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:31:45,684 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:31:48,883 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:31:48,883 - aiogram.event - INFO - Update id=348068603 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:32:00,430 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:32:00,431 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:32:00,524 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:32:01,949 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:32:01,949 - aiogram.event - INFO - Update id=348068604 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:38:29,468 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:38:29,469 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:38:29,564 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:38:36,706 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:38:36,707 - aiogram.event - INFO - Update id=348068605 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:46:07,140 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:46:07,141 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:46:07,237 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:46:07,276 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:46:07,277 - aiogram.event - INFO - Update id=348068606 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:49:56,940 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:49:56,941 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:49:57,037 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:49:57,078 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:49:57,078 - aiogram.event - INFO - Update id=348068607 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:50:00,419 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:50:00,420 - aiogram.event - INFO - Update id=348068608 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:50:01,362 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:50:01,363 - aiogram.event - INFO - Update id=348068609 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:50:01,895 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:50:01,895 - aiogram.event - INFO - Update id=348068610 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:50:12,287 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:50:12,288 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:50:12,383 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:50:13,606 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:50:13,607 - aiogram.event - INFO - Update id=348068611 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:51:48,699 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:51:48,700 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:51:48,789 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:51:50,094 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:51:50,094 - aiogram.event - INFO - Update id=348068612 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:51:52,341 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:51:52,341 - aiogram.event - INFO - Update id=348068613 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:51:54,171 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:51:54,172 - aiogram.event - INFO - Update id=348068614 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:51:55,088 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:51:55,088 - aiogram.event - INFO - Update id=348068615 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:52:02,703 - root - INFO - Received message from SMOTRASHA: start
+2024-08-06 12:52:02,704 - aiogram.event - INFO - Update id=348068616 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:55:05,374 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:55:05,375 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:55:05,469 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:55:11,452 - root - INFO - Received message from SMOTRASHA: d
+2024-08-06 12:55:11,453 - aiogram.event - INFO - Update id=348068617 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-06 12:56:32,515 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-06 12:56:32,516 - aiogram.dispatcher - INFO - Start polling
+2024-08-06 12:56:32,610 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-06 12:56:40,218 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-06 12:56:40,219 - aiogram.event - INFO - Update id=348068618 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 04:26:27,314 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 04:26:27,315 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 04:26:27,525 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 04:26:37,815 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 04:26:37,815 - aiogram.event - INFO - Update id=348068619 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:12:04,040 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:12:04,041 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:12:04,139 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:12:10,864 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:12:10,864 - aiogram.event - INFO - Update id=348068620 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:17:37,864 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:17:37,864 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:17:37,958 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:17:49,112 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:17:49,306 - aiogram.event - INFO - Update id=348068621 is handled. Duration 202 ms by bot id=7206310358
+2024-08-07 05:23:32,467 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:23:32,468 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:23:32,571 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:23:37,012 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:23:37,143 - aiogram.event - INFO - Update id=348068622 is handled. Duration 125 ms by bot id=7206310358
+2024-08-07 05:23:41,664 - root - INFO - Received message from SMOTRASHA: /register
+2024-08-07 05:23:41,749 - aiogram.event - INFO - Update id=348068623 is handled. Duration 77 ms by bot id=7206310358
+2024-08-07 05:24:08,641 - root - INFO - Received message from SMOTRASHA: /register sdfajhg andri@gmail.com melop321
+2024-08-07 05:24:09,173 - aiogram.event - INFO - Update id=348068624 is handled. Duration 531 ms by bot id=7206310358
+2024-08-07 05:24:20,481 - root - INFO - Received message from SMOTRASHA: /login
+2024-08-07 05:24:20,582 - aiogram.event - INFO - Update id=348068625 is handled. Duration 94 ms by bot id=7206310358
+2024-08-07 05:24:34,524 - root - INFO - Received message from SMOTRASHA: /login sdfajhg melop321
+2024-08-07 05:24:34,872 - aiogram.event - INFO - Update id=348068626 is handled. Duration 343 ms by bot id=7206310358
+2024-08-07 05:30:25,785 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:30:25,786 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:30:25,889 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:30:29,930 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:30:30,132 - aiogram.event - INFO - Update id=348068627 is handled. Duration 188 ms by bot id=7206310358
+2024-08-07 05:30:32,332 - root - INFO - Received message from SMOTRASHA: /register
+2024-08-07 05:30:32,471 - aiogram.event - INFO - Update id=348068628 is handled. Duration 139 ms by bot id=7206310358
+2024-08-07 05:30:35,322 - root - INFO - Received message from SMOTRASHA: niga
+2024-08-07 05:30:35,411 - aiogram.event - INFO - Update id=348068629 is handled. Duration 77 ms by bot id=7206310358
+2024-08-07 05:30:42,191 - root - INFO - Received message from SMOTRASHA: uni2.0zxc@gmail.com
+2024-08-07 05:30:42,258 - aiogram.event - INFO - Update id=348068630 is handled. Duration 78 ms by bot id=7206310358
+2024-08-07 05:30:44,657 - root - INFO - Received message from SMOTRASHA: melop321
+2024-08-07 05:30:45,022 - aiogram.event - INFO - Update id=348068631 is handled. Duration 359 ms by bot id=7206310358
+2024-08-07 05:30:48,327 - root - INFO - Received message from SMOTRASHA: /login
+2024-08-07 05:30:48,377 - aiogram.event - INFO - Update id=348068632 is handled. Duration 46 ms by bot id=7206310358
+2024-08-07 05:30:52,389 - root - INFO - Received message from SMOTRASHA: niga
+2024-08-07 05:30:52,560 - aiogram.event - INFO - Update id=348068633 is handled. Duration 171 ms by bot id=7206310358
+2024-08-07 05:30:59,334 - root - INFO - Received message from SMOTRASHA: melop321
+2024-08-07 05:30:59,589 - aiogram.event - INFO - Update id=348068634 is handled. Duration 264 ms by bot id=7206310358
+2024-08-07 05:33:12,634 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:33:12,634 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:33:12,728 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:33:17,679 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:33:17,915 - aiogram.event - INFO - Update id=348068635 is handled. Duration 234 ms by bot id=7206310358
+2024-08-07 05:37:46,282 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:37:46,283 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:37:46,380 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:37:54,744 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:37:54,745 - aiogram.event - INFO - Update id=348068636 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:39:50,704 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:39:50,704 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:39:50,803 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:39:51,099 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:39:51,104 - aiogram.event - INFO - Update id=348068637 is not handled. Duration 16 ms by bot id=7206310358
+2024-08-07 05:39:51,105 - aiogram.event - ERROR - Cause exception while process update id=348068637 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 35, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 20, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 05:40:42,518 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:40:42,519 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:40:42,608 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:47:02,906 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:47:02,907 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:47:03,004 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:48:45,829 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:48:45,830 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:48:46,988 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:48:50,716 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:48:50,892 - aiogram.event - INFO - Update id=348068638 is handled. Duration 172 ms by bot id=7206310358
+2024-08-07 05:51:04,821 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:51:04,821 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:51:04,914 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:51:07,818 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:51:07,819 - aiogram.event - INFO - Update id=348068639 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:53:27,726 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:53:27,727 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:53:27,822 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:53:29,580 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:53:29,581 - aiogram.event - INFO - Update id=348068640 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:53:29,581 - aiogram.event - ERROR - Cause exception while process update id=348068640 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 14, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 05:54:15,934 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:54:15,935 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:54:16,022 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:54:18,486 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:54:18,487 - aiogram.event - INFO - Update id=348068641 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:54:18,487 - aiogram.event - ERROR - Cause exception while process update id=348068641 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 14, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 05:56:16,583 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:56:16,584 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:56:16,729 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:56:22,234 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:56:22,235 - aiogram.event - INFO - Update id=348068642 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:56:22,235 - aiogram.event - ERROR - Cause exception while process update id=348068642 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 14, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 05:58:15,201 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:58:15,202 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:58:15,316 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:58:17,056 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:58:17,056 - aiogram.event - INFO - Update id=348068643 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:58:17,056 - aiogram.event - ERROR - Cause exception while process update id=348068643 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 14, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 05:59:07,843 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 05:59:07,844 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 05:59:07,947 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 05:59:09,333 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 05:59:09,334 - aiogram.event - INFO - Update id=348068644 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 05:59:09,334 - aiogram.event - ERROR - Cause exception while process update id=348068644 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 14, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:01:08,920 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-07 06:01:09,172 - aiogram.dispatcher - INFO - Polling stopped for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:03:31,891 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:03:31,892 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:03:31,991 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:03:34,729 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:03:34,731 - aiogram.event - INFO - Update id=348068645 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:03:34,731 - aiogram.event - ERROR - Cause exception while process update id=348068645 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:04:45,548 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:04:45,548 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:04:45,635 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:04:48,541 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:04:48,541 - aiogram.event - INFO - Update id=348068646 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:04:48,541 - aiogram.event - ERROR - Cause exception while process update id=348068646 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:04:51,349 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:04:51,349 - aiogram.event - INFO - Update id=348068647 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:04:51,350 - aiogram.event - ERROR - Cause exception while process update id=348068647 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:05:33,651 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:05:33,652 - aiogram.event - INFO - Update id=348068648 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:05:33,652 - aiogram.event - ERROR - Cause exception while process update id=348068648 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard.add(
+               ^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:05:41,398 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:05:41,399 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:05:41,486 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:05:51,078 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:05:51,079 - aiogram.event - INFO - Update id=348068649 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:05:51,079 - aiogram.event - ERROR - Cause exception while process update id=348068649 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:09:01,099 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:09:01,100 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:09:01,216 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:09:02,930 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:09:02,931 - aiogram.event - INFO - Update id=348068650 is not handled. Duration 14 ms by bot id=7206310358
+2024-08-07 06:09:02,931 - aiogram.event - ERROR - Cause exception while process update id=348068650 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:10:03,934 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:10:03,935 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:10:04,021 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:10:11,199 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:10:11,200 - aiogram.event - INFO - Update id=348068651 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:10:11,201 - aiogram.event - ERROR - Cause exception while process update id=348068651 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:10:58,828 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-07 06:10:59,079 - aiogram.dispatcher - INFO - Polling stopped for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:11:01,635 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:11:01,636 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:11:01,724 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:11:05,934 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:11:05,935 - aiogram.event - INFO - Update id=348068652 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:11:05,935 - aiogram.event - ERROR - Cause exception while process update id=348068652 by bot id=7206310358
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 6, in get_start_keyboard
+    [InlineKeyboardButton("Register", callback_data="register"), InlineKeyboardButton("Login", callback_data="login")]
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2024-08-07 06:12:17,018 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:12:17,019 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:12:17,109 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:12:19,764 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:12:19,765 - aiogram.event - INFO - Update id=348068653 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:12:19,766 - aiogram.event - ERROR - Cause exception while process update id=348068653 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:12:55,841 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-07 06:12:56,092 - aiogram.dispatcher - INFO - Polling stopped for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:14:09,680 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:14:09,681 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:14:09,788 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:14:22,117 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:14:22,117 - aiogram.event - INFO - Update id=348068654 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:14:22,118 - aiogram.event - ERROR - Cause exception while process update id=348068654 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 4, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup(row_width=2)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={'row_width': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:16:01,479 - aiogram.dispatcher - INFO - Polling stopped
+2024-08-07 06:16:01,731 - aiogram.dispatcher - INFO - Polling stopped for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:16:04,352 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:16:04,354 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:16:04,444 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:16:07,421 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:16:07,422 - aiogram.event - INFO - Update id=348068655 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:16:07,422 - aiogram.event - ERROR - Cause exception while process update id=348068655 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:18:04,963 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:18:04,964 - aiogram.event - INFO - Update id=348068656 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:18:04,964 - aiogram.event - ERROR - Cause exception while process update id=348068656 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard.inline_keyboard.append([
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:20:21,869 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:20:21,870 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:20:21,988 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:20:25,318 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:20:25,319 - aiogram.event - INFO - Update id=348068657 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:20:25,319 - aiogram.event - ERROR - Cause exception while process update id=348068657 by bot id=7206310358
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 8, in get_start_keyboard
+    InlineKeyboardButton("Register", callback_data="register"),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: BaseModel.__init__() takes 1 positional argument but 2 were given
+2024-08-07 06:21:24,984 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:21:24,986 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:21:25,075 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:21:28,103 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:21:28,103 - aiogram.event - INFO - Update id=348068658 is not handled. Duration 0 ms by bot id=7206310358
+2024-08-07 06:21:28,103 - aiogram.event - ERROR - Cause exception while process update id=348068658 by bot id=7206310358
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+Traceback (most recent call last):
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\config.py", line 36, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\handlers\routes.py", line 13, in start
+    "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
+                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\tg\keyboards\keyboard.py", line 5, in get_start_keyboard
+    keyboard = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Project\finance_tracker\venv\Lib\site-packages\pydantic\main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.8/v/missing
+2024-08-07 06:29:30,972 - asyncio - DEBUG - Using proactor: IocpProactor
+2024-08-07 06:29:30,973 - aiogram.dispatcher - INFO - Start polling
+2024-08-07 06:29:31,086 - aiogram.dispatcher - INFO - Run polling for bot @sdafkjh_bot id=7206310358 - 'Market'
+2024-08-07 06:29:33,319 - root - INFO - Received message from SMOTRASHA: /start
+2024-08-07 06:29:33,458 - aiogram.event - INFO - Update id=348068659 is handled. Duration 140 ms by bot id=7206310358
+2024-08-07 06:29:35,351 - root - INFO - Received update: update_id=348068660 message=None edited_message=None channel_post=None edited_channel_post=None business_connection=None business_message=None edited_business_message=None deleted_business_messages=None message_reaction=None message_reaction_count=None inline_query=None chosen_inline_result=None callback_query=CallbackQuery(id='4259330169699743362', from_user=User(id=991702584, is_bot=False, first_name='Andrii', last_name='0𒉭', username='SMOTRASHA', language_code='en', is_premium=None, added_to_attachment_menu=None, can_join_groups=None, can_read_all_group_messages=None, supports_inline_queries=None, can_connect_to_business=None), chat_instance='1703795307911531669', message=Message(message_id=102, date=datetime.datetime(2024, 8, 7, 9, 29, 18, tzinfo=TzInfo(UTC)), chat=Chat(id=991702584, type='private', title=None, username='SMOTRASHA', first_name='Andrii', last_name='0𒉭', is_forum=None, accent_color_id=None, active_usernames=None, available_reactions=None, background_custom_emoji_id=None, bio=None, birthdate=None, business_intro=None, business_location=None, business_opening_hours=None, can_set_sticker_set=None, custom_emoji_sticker_set_name=None, description=None, emoji_status_custom_emoji_id=None, emoji_status_expiration_date=None, has_aggressive_anti_spam_enabled=None, has_hidden_members=None, has_private_forwards=None, has_protected_content=None, has_restricted_voice_and_video_messages=None, has_visible_history=None, invite_link=None, join_by_request=None, join_to_send_messages=None, linked_chat_id=None, location=None, message_auto_delete_time=None, permissions=None, personal_chat=None, photo=None, pinned_message=None, profile_accent_color_id=None, profile_background_custom_emoji_id=None, slow_mode_delay=None, sticker_set_name=None, unrestrict_boost_count=None), message_thread_id=None, from_user=User(id=7206310358, is_bot=True, first_name='Market', last_name=None, username='sdafkjh_bot', language_code=None, is_premium=None, added_to_attachment_menu=None, can_join_groups=None, can_read_all_group_messages=None, supports_inline_queries=None, can_connect_to_business=None), sender_chat=None, sender_boost_count=None, sender_business_bot=None, business_connection_id=None, forward_origin=None, is_topic_message=None, is_automatic_forward=None, reply_to_message=None, external_reply=None, quote=None, reply_to_story=None, via_bot=None, edit_date=None, has_protected_content=None, is_from_offline=None, media_group_id=None, author_signature=None, text='Welcome! Please choose an action:', entities=None, link_preview_options=None, effect_id=None, animation=None, audio=None, document=None, paid_media=None, photo=None, sticker=None, story=None, video=None, video_note=None, voice=None, caption=None, caption_entities=None, show_caption_above_media=None, has_media_spoiler=None, contact=None, dice=None, game=None, poll=None, venue=None, location=None, new_chat_members=None, left_chat_member=None, new_chat_title=None, new_chat_photo=None, delete_chat_photo=None, group_chat_created=None, supergroup_chat_created=None, channel_chat_created=None, message_auto_delete_timer_changed=None, migrate_to_chat_id=None, migrate_from_chat_id=None, pinned_message=None, invoice=None, successful_payment=None, refunded_payment=None, users_shared=None, chat_shared=None, connected_website=None, write_access_allowed=None, passport_data=None, proximity_alert_triggered=None, boost_added=None, chat_background_set=None, forum_topic_created=None, forum_topic_edited=None, forum_topic_closed=None, forum_topic_reopened=None, general_forum_topic_hidden=None, general_forum_topic_unhidden=None, giveaway_created=None, giveaway=None, giveaway_winners=None, giveaway_completed=None, video_chat_scheduled=None, video_chat_started=None, video_chat_ended=None, video_chat_participants_invited=None, web_app_data=None, reply_markup=InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Register', url=None, callback_data='register', web_app=None, login_url=None, switch_inline_query=None, switch_inline_query_current_chat=None, switch_inline_query_chosen_chat=None, callback_game=None, pay=None)], [InlineKeyboardButton(text='Login', url=None, callback_data='login', web_app=None, login_url=None, switch_inline_query=None, switch_inline_query_current_chat=None, switch_inline_query_chosen_chat=None, callback_game=None, pay=None)]]), forward_date=None, forward_from=None, forward_from_chat=None, forward_from_message_id=None, forward_sender_name=None, forward_signature=None, user_shared=None), inline_message_id=None, data='login', game_short_name=None) shipping_query=None pre_checkout_query=None poll=None poll_answer=None my_chat_member=None chat_member=None chat_join_request=None chat_boost=None removed_chat_boost=None
+2024-08-07 06:29:35,430 - aiogram.event - INFO - Update id=348068660 is handled. Duration 125 ms by bot id=7206310358
+2024-08-07 06:29:36,939 - root - INFO - Received update: update_id=348068661 message=None edited_message=None channel_post=None edited_channel_post=None business_connection=None business_message=None edited_business_message=None deleted_business_messages=None message_reaction=None message_reaction_count=None inline_query=None chosen_inline_result=None callback_query=CallbackQuery(id='4259330169916374395', from_user=User(id=991702584, is_bot=False, first_name='Andrii', last_name='0𒉭', username='SMOTRASHA', language_code='en', is_premium=None, added_to_attachment_menu=None, can_join_groups=None, can_read_all_group_messages=None, supports_inline_queries=None, can_connect_to_business=None), chat_instance='1703795307911531669', message=Message(message_id=102, date=datetime.datetime(2024, 8, 7, 9, 29, 18, tzinfo=TzInfo(UTC)), chat=Chat(id=991702584, type='private', title=None, username='SMOTRASHA', first_name='Andrii', last_name='0𒉭', is_forum=None, accent_color_id=None, active_usernames=None, available_reactions=None, background_custom_emoji_id=None, bio=None, birthdate=None, business_intro=None, business_location=None, business_opening_hours=None, can_set_sticker_set=None, custom_emoji_sticker_set_name=None, description=None, emoji_status_custom_emoji_id=None, emoji_status_expiration_date=None, has_aggressive_anti_spam_enabled=None, has_hidden_members=None, has_private_forwards=None, has_protected_content=None, has_restricted_voice_and_video_messages=None, has_visible_history=None, invite_link=None, join_by_request=None, join_to_send_messages=None, linked_chat_id=None, location=None, message_auto_delete_time=None, permissions=None, personal_chat=None, photo=None, pinned_message=None, profile_accent_color_id=None, profile_background_custom_emoji_id=None, slow_mode_delay=None, sticker_set_name=None, unrestrict_boost_count=None), message_thread_id=None, from_user=User(id=7206310358, is_bot=True, first_name='Market', last_name=None, username='sdafkjh_bot', language_code=None, is_premium=None, added_to_attachment_menu=None, can_join_groups=None, can_read_all_group_messages=None, supports_inline_queries=None, can_connect_to_business=None), sender_chat=None, sender_boost_count=None, sender_business_bot=None, business_connection_id=None, forward_origin=None, is_topic_message=None, is_automatic_forward=None, reply_to_message=None, external_reply=None, quote=None, reply_to_story=None, via_bot=None, edit_date=None, has_protected_content=None, is_from_offline=None, media_group_id=None, author_signature=None, text='Welcome! Please choose an action:', entities=None, link_preview_options=None, effect_id=None, animation=None, audio=None, document=None, paid_media=None, photo=None, sticker=None, story=None, video=None, video_note=None, voice=None, caption=None, caption_entities=None, show_caption_above_media=None, has_media_spoiler=None, contact=None, dice=None, game=None, poll=None, venue=None, location=None, new_chat_members=None, left_chat_member=None, new_chat_title=None, new_chat_photo=None, delete_chat_photo=None, group_chat_created=None, supergroup_chat_created=None, channel_chat_created=None, message_auto_delete_timer_changed=None, migrate_to_chat_id=None, migrate_from_chat_id=None, pinned_message=None, invoice=None, successful_payment=None, refunded_payment=None, users_shared=None, chat_shared=None, connected_website=None, write_access_allowed=None, passport_data=None, proximity_alert_triggered=None, boost_added=None, chat_background_set=None, forum_topic_created=None, forum_topic_edited=None, forum_topic_closed=None, forum_topic_reopened=None, general_forum_topic_hidden=None, general_forum_topic_unhidden=None, giveaway_created=None, giveaway=None, giveaway_winners=None, giveaway_completed=None, video_chat_scheduled=None, video_chat_started=None, video_chat_ended=None, video_chat_participants_invited=None, web_app_data=None, reply_markup=InlineKeyboardMarkup(inline_keyboard=[[InlineKeyboardButton(text='Register', url=None, callback_data='register', web_app=None, login_url=None, switch_inline_query=None, switch_inline_query_current_chat=None, switch_inline_query_chosen_chat=None, callback_game=None, pay=None)], [InlineKeyboardButton(text='Login', url=None, callback_data='login', web_app=None, login_url=None, switch_inline_query=None, switch_inline_query_current_chat=None, switch_inline_query_chosen_chat=None, callback_game=None, pay=None)]]), forward_date=None, forward_from=None, forward_from_chat=None, forward_from_message_id=None, forward_sender_name=None, forward_signature=None, user_shared=None), inline_message_id=None, data='register', game_short_name=None) shipping_query=None pre_checkout_query=None poll=None poll_answer=None my_chat_member=None chat_member=None chat_join_request=None chat_boost=None removed_chat_boost=None
+2024-08-07 06:29:37,070 - aiogram.event - INFO - Update id=348068661 is handled. Duration 125 ms by bot id=7206310358
