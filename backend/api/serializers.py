@@ -1,5 +1,10 @@
 from rest_framework import serializers
-from .models import User, Income, Expense
+from .models import (
+    User, 
+    Income, 
+    Expense, 
+    Category
+)
 from django.contrib.auth import authenticate
 
 
@@ -19,7 +24,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class LoginSerializer(serializers.Serializer):
     username = serializers.CharField()
-    password = serializers.CharField()
+    password = serializers.CharField(write_only=True)
 
     def validate(self, data):
         username = data.get('username')
@@ -35,10 +40,17 @@ class LoginSerializer(serializers.Serializer):
 class IncomeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Income
-        fields = "__all__"
+        fields = ["amount", "description", "category"]
 
 
 class ExpenseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Expense
-        fields = "__all__"
+        fields = ["amount", "description", "category"]
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = ["name"]
+
