@@ -1,12 +1,12 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 
-def get_start_keyboard():
+def get_start_keyboard() -> InlineKeyboardMarkup:
     """
     Creates the start keyboard with options for user actions.
 
     Returns:
-        InlineKeyboardMarkup: A keyboard with buttons for registering, logging in, viewing and managing expenses, and other actions.
+        InlineKeyboardMarkup: An inline keyboard markup with options for registration, login, and other actions.
     """
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -27,12 +27,27 @@ def get_start_keyboard():
     )
 
 
-def get_report_keyboard():
+def get_login_keyboard() -> InlineKeyboardMarkup:
+    """
+    Creates a keyboard with options for logging in.
+
+    Returns:
+        InlineKeyboardMarkup: An inline keyboard markup with options for logging in or returning to the start menu.
+    """
+    return InlineKeyboardMarkup(
+        inline_keyboard=[
+            [InlineKeyboardButton(text="Login", callback_data="login")],
+            [InlineKeyboardButton(text="Back to Start", callback_data="start")],
+        ]
+    )
+
+
+def get_report_keyboard() -> InlineKeyboardMarkup:
     """
     Creates the report keyboard with options for generating a report or returning to the start menu.
 
     Returns:
-        InlineKeyboardMarkup: A keyboard with buttons to generate a report or go back to the start menu.
+        InlineKeyboardMarkup: An inline keyboard markup with options for generating a report or returning to the start menu.
     """
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -42,12 +57,12 @@ def get_report_keyboard():
     )
 
 
-def get_back_to_start_keyboard():
+def get_back_to_start_keyboard() -> InlineKeyboardMarkup:
     """
     Creates a keyboard with a single button to return to the start menu.
 
     Returns:
-        InlineKeyboardMarkup: A keyboard with a button to go back to the start menu.
+        InlineKeyboardMarkup: An inline keyboard markup with a button to return to the start menu.
     """
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -56,12 +71,12 @@ def get_back_to_start_keyboard():
     )
 
 
-def get_expense_period_keyboard():
+def get_expense_period_keyboard() -> InlineKeyboardMarkup:
     """
     Creates a keyboard for selecting the expense period (daily, monthly, yearly) or returning to the start menu.
 
     Returns:
-        InlineKeyboardMarkup: A keyboard with buttons for viewing expenses by period or going back to the start menu.
+        InlineKeyboardMarkup: An inline keyboard markup with buttons for selecting the expense period or returning to the start menu.
     """
     return InlineKeyboardMarkup(
         inline_keyboard=[
@@ -75,3 +90,25 @@ def get_expense_period_keyboard():
             [InlineKeyboardButton(text="Back to Start", callback_data="start")],
         ]
     )
+
+
+def get_income_period_keyboard() -> InlineKeyboardMarkup:
+    """
+    Creates an inline keyboard for selecting the period to view incomes.
+
+    Returns:
+        InlineKeyboardMarkup: An inline keyboard markup with buttons for different income periods.
+    """
+    keyboard = InlineKeyboardMarkup(row_width=2)
+
+    buttons = [
+        InlineKeyboardButton(text="Today", callback_data="income_today"),
+        InlineKeyboardButton(text="This Week", callback_data="income_week"),
+        InlineKeyboardButton(text="This Month", callback_data="income_month"),
+        InlineKeyboardButton(text="This Year", callback_data="income_year"),
+        InlineKeyboardButton(text="All Time", callback_data="income_all_time"),
+    ]
+
+    keyboard.add(*buttons)
+
+    return keyboard

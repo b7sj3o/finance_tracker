@@ -1,8 +1,13 @@
-from rest_framework import generics, status
+"""
+Views for handling API requests in the finance tracker application.
+"""
+
+from django.contrib.auth import login as auth_login
+from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-from rest_framework.views import APIView
-from django.contrib.auth import login as auth_login
+from rest_framework_simplejwt.tokens import AccessToken
+
 from .models import User, Expense, Income, Category
 from .serializers import (
     UserSerializer,
@@ -11,71 +16,77 @@ from .serializers import (
     IncomeSerializer,
     CategorySerializer,
 )
-import logging
+from .mixins import (
+    UserFilteredMixin,
+    ContentTypeValidationMixin,
+    AuthMixin,
+    ListMixin,
+    CreateMixin,
+    RetrieveMixin,
+    UpdateMixin,
+    DeleteMixin,
+)
 
-logger = logging.getLogger(__name__)
 
-
-class UserFilteredMixin(generics.GenericAPIView):
+class BotUserCreateView(CreateMixin, generics.GenericAPIView):
     """
-    Mixin to filter queryset by current user.
+    Create a new user via bot.
     """
-
-    def get_queryset(self):
-        return super().get_queryset().filter(user=self.request.user)
-
-    def perform_create(self, serializer):
-        serializer.save(user=self.request.user)
+    permission_classes = [AllowAny]
+    serializer_class = UserSerializer
 
 
-class UserCreateView(generics.CreateAPIView):
+class UserCreateView(ContentTypeValidationMixin, generics.CreateAPIView):
+    """
+    Create a new user with content type validation.
+    """
     queryset = User.objects.all()
     permission_classes = [AllowAny]
     serializer_class = UserSerializer
 
-    def post(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
+class BotLoginView(CreateMixin, generics.GenericAPIView):
+    """
+    Log in a user via bot and return a JWT token.
+    """
+    permission_classes = [AllowAny]
+    serializer_class = LoginSerializer
+
+    def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
-            user = serializer.save()
+            user = serializer.validated_data["user"]
+            auth_login(request, user)
+            token = AccessToken.for_user(user)
             return Response(
                 {
                     "status": "success",
-                    "message": "User created successfully",
-                    "user": UserSerializer(user).data,
+                    "message": "User logged in successfully.",
+                    "token": str(token),
+                    "user": {"username": user.username},
                 },
-                status=status.HTTP_201_CREATED,
+                status=status.HTTP_200_OK,
             )
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class LoginView(APIView):
+class LoginView(ContentTypeValidationMixin, CreateMixin, generics.GenericAPIView):
+    """
+    Log in a user and set a session cookie.
+    """
     permission_classes = [AllowAny]
     serializer_class = LoginSerializer
 
-    def post(self, request):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
-
-        serializer = LoginSerializer(data=request.data)
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
         if serializer.is_valid():
             user = serializer.validated_data["user"]
             auth_login(request, user)
-
             response_data = {
-                "user": {
-                    "username": user.username,
-                }
+                "status": "success",
+                "message": "User logged in successfully.",
+                "user": {"username": user.username},
             }
-
             response = Response(response_data, status=status.HTTP_200_OK)
             response.set_cookie(
                 key="sessionid",
@@ -84,132 +95,134 @@ class LoginView(APIView):
                 samesite="Lax",
             )
             return response
-
-        logger.error(f"Login error: {serializer.errors}")
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class ListCreateExpenseView(UserFilteredMixin, generics.ListCreateAPIView):
+class BotListCreateExpenseView(
+    AuthMixin, UserFilteredMixin, ListMixin, CreateMixin, generics.GenericAPIView
+):
+    """
+    List and create expenses via bot.
+    """
+    serializer_class = ExpenseSerializer
+
+
+class ListCreateExpenseView(
+    ContentTypeValidationMixin, UserFilteredMixin, generics.ListCreateAPIView
+):
+    """
+    List and create expenses with content type validation.
+    """
     queryset = Expense.objects.all()
     serializer_class = ExpenseSerializer
 
-    def post(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
-        return super().post(request, *args, **kwargs)
+class BotRetrieveUpdateDestroyExpenseView(
+    AuthMixin,
+    UserFilteredMixin,
+    RetrieveMixin,
+    UpdateMixin,
+    DeleteMixin,
+    generics.GenericAPIView,
+):
+    """
+    Retrieve, update, or destroy an expense via bot.
+    """
+    serializer_class = ExpenseSerializer
 
 
 class RetrieveUpdateDestroyExpenseView(
-    UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
+    ContentTypeValidationMixin, UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
 ):
+    """
+    Retrieve, update, or destroy an expense with content type validation.
+    """
     queryset = Expense.objects.all()
     serializer_class = ExpenseSerializer
 
-    def put(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
-        return super().put(request, *args, **kwargs)
-
-    def patch(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
-
-        return super().patch(request, *args, **kwargs)
-
-    def deletes(self, request, *args, **kwargs):
-        return super().delete(request, *args, **kwargs)
+class BotListCreateIncomeView(
+    AuthMixin, UserFilteredMixin, ListMixin, CreateMixin, generics.GenericAPIView
+):
+    """
+    List and create incomes via bot.
+    """
+    serializer_class = IncomeSerializer
 
 
-class ListCreateIncomeView(UserFilteredMixin, generics.ListCreateAPIView):
+class ListCreateIncomeView(
+    ContentTypeValidationMixin, UserFilteredMixin, generics.ListCreateAPIView
+):
+    """
+    List and create incomes with content type validation.
+    """
     queryset = Income.objects.all()
     serializer_class = IncomeSerializer
 
-    def post(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
-        return super().post(request, *args, **kwargs)
+class BotRetrieveUpdateDestroyIncomeView(
+    AuthMixin,
+    UserFilteredMixin,
+    RetrieveMixin,
+    UpdateMixin,
+    DeleteMixin,
+    generics.GenericAPIView,
+):
+    """
+    Retrieve, update, or destroy an income via bot.
+    """
+    serializer_class = IncomeSerializer
 
 
 class RetrieveUpdateDestroyIncomeView(
-    UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
+    ContentTypeValidationMixin, UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
 ):
+    """
+    Retrieve, update, or destroy an income with content type validation.
+    """
     queryset = Income.objects.all()
     serializer_class = IncomeSerializer
 
-    def put(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
-        return super().put(request, *args, **kwargs)
-
-    def patch(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
-
-        return super().patch(request, *args, **kwargs)
-
-    def deletes(self, request, *args, **kwargs):
-        return super().delete(request, *args, **kwargs)
+class BotListCreateCategoryView(
+    AuthMixin, UserFilteredMixin, ListMixin, CreateMixin, generics.GenericAPIView
+):
+    """
+    List and create categories via bot.
+    """
+    serializer_class = CategorySerializer
 
 
-class ListCreateCategoryView(UserFilteredMixin, generics.ListCreateAPIView):
+class ListCreateCategoryView(
+    ContentTypeValidationMixin, UserFilteredMixin, generics.ListCreateAPIView
+):
+    """
+    List and create categories with content type validation.
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-    def post(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
 
-        return super().post(request, *args, **kwargs)
+class BotRetrieveUpdateDestroyCategoryView(
+    AuthMixin,
+    UserFilteredMixin,
+    RetrieveMixin,
+    UpdateMixin,
+    DeleteMixin,
+    generics.GenericAPIView,
+):
+    """
+    Retrieve, update, or destroy a category via bot.
+    """
+    serializer_class = CategorySerializer
 
 
 class RetrieveUpdateDestroyCategoryView(
-    UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
+    ContentTypeValidationMixin, UserFilteredMixin, generics.RetrieveUpdateDestroyAPIView
 ):
+    """
+    Retrieve, update, or destroy a category with content type validation.
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-
-    def put(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
-
-        return super().put(request, *args, **kwargs)
-
-    def patch(self, request, *args, **kwargs):
-        if request.content_type != "application/json":
-            return Response(
-                {"detail": "Content-Type must be application/json"},
-                status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
-            )
-
-        return super().patch(request, *args, **kwargs)
-
-    def deletes(self, request, *args, **kwargs):
-        return super().delete(request, *args, **kwargs)
+#TODO доробити всюди логи

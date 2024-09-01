@@ -1,23 +1,33 @@
+import os
+import aiohttp
 from aiogram import types, F
 from aiogram.fsm.context import FSMContext
+from aiogram.types import Message, CallbackQuery
 from utils.auth_utils import generate_csv_report
 from keyboards import (
     get_start_keyboard,
     get_report_keyboard,
     get_back_to_start_keyboard,
     get_expense_period_keyboard,
+    get_income_period_keyboard,
 )
-import os
-from config import dp, Registration, Login, Expense, router
+from config import dp, Registration, Login, Expense, Income, router
 from db import db_session, User, Finance
+
+API_BASE_URL = "http://your_django_api_url"
+
+
+async def api_request(
+    method: str, endpoint: str, json: dict = None, headers: dict = None
+):
+    async with aiohttp.ClientSession() as session:
+        url = f"{API_BASE_URL}/{endpoint}"
+        async with session.request(method, url, json=json, headers=headers) as response:
+            return await response.json()
 
 
 @dp.message(F.text == "/start")
-async def start(msg: types.Message, state: FSMContext):
-    """
-    Handles the /start command. Greets the user if they are logged in,
-    otherwise presents the start menu.
-    """
+async def start(msg: Message, state: FSMContext):
     user = db_session.query(User).filter_by(username=msg.from_user.username).first()
     await msg.delete()
     if user:
@@ -29,20 +39,14 @@ async def start(msg: types.Message, state: FSMContext):
 
 
 @dp.callback_query(F.data == "start")
-async def back_to_start(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Handles the 'start' callback. Displays the start menu again.
-    """
+async def back_to_start(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
     )
 
 
 @dp.callback_query(F.data == "register")
-async def register_start(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Initiates the registration process by asking for the username.
-    """
+async def register_start(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Please enter your desired username.", reply_markup=get_back_to_start_keyboard()
     )
@@ -50,11 +54,7 @@ async def register_start(callback: types.CallbackQuery, state: FSMContext):
 
 
 @dp.message(Registration.waiting_for_username)
-async def process_username(msg: types.Message, state: FSMContext):
-    """
-    Processes the username entered by the user during registration.
-    Checks if the username already exists.
-    """
+async def process_username(msg: Message, state: FSMContext):
     username = msg.text.strip()
     if db_session.query(User).filter_by(username=username).first():
         await msg.answer(
@@ -71,10 +71,7 @@ async def process_username(msg: types.Message, state: FSMContext):
 
 
 @dp.message(Registration.waiting_for_email)
-async def process_email(msg: types.Message, state: FSMContext):
-    """
-    Processes the email address entered by the user during registration.
-    """
+async def process_email(msg: Message, state: FSMContext):
     email = msg.text.strip()
     await state.update_data(email=email)
     await msg.answer(
@@ -84,10 +81,7 @@ async def process_email(msg: types.Message, state: FSMContext):
 
 
 @dp.message(Registration.waiting_for_password)
-async def process_password(msg: types.Message, state: FSMContext):
-    """
-    Processes the password entered by the user during registration.
-    """
+async def process_password(msg: Message, state: FSMContext):
     password = msg.text.strip()
     user_data = await state.get_data()
     username = user_data.get("username")
@@ -101,20 +95,24 @@ async def process_password(msg: types.Message, state: FSMContext):
         await state.clear()
         return
 
-    user = User(username=username, email=email, password_hash=password)
-    db_session.add(user)
-    db_session.commit()
-    await msg.answer(
-        f"User {username} registered successfully.", reply_markup=get_start_keyboard()
-    )
-    await state.clear()
+    payload = {"username": username, "email": email, "password": password}
+    response = await api_request("POST", "bot/register/", json=payload)
+    if response.get("status") == "success":
+        await msg.answer(
+            f"User {username} registered successfully.",
+            reply_markup=get_start_keyboard(),
+        )
+        await state.clear()
+    else:
+        await msg.answer(
+            "Registration failed. Please try again later.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+        await state.clear()
 
 
 @dp.callback_query(F.data == "login")
-async def login_start(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Initiates the login process by asking for the username.
-    """
+async def login_start(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Please enter your username.", reply_markup=get_back_to_start_keyboard()
     )
@@ -122,10 +120,7 @@ async def login_start(callback: types.CallbackQuery, state: FSMContext):
 
 
 @dp.message(Login.waiting_for_username)
-async def process_login_username(msg: types.Message, state: FSMContext):
-    """
-    Processes the username entered by the user during login.
-    """
+async def process_login_username(msg: Message, state: FSMContext):
     username = msg.text.strip()
     user = db_session.query(User).filter_by(username=username).first()
     if user:
@@ -142,10 +137,7 @@ async def process_login_username(msg: types.Message, state: FSMContext):
 
 
 @dp.message(Login.waiting_for_password)
-async def process_login_password(msg: types.Message, state: FSMContext):
-    """
-    Processes the password entered by the user during login.
-    """
+async def process_login_password(msg: Message, state: FSMContext):
     password = msg.text.strip()
     user_data = await state.get_data()
     username = user_data.get("username")
@@ -158,11 +150,14 @@ async def process_login_password(msg: types.Message, state: FSMContext):
         await state.clear()
         return
 
-    user = db_session.query(User).filter_by(username=username).first()
-    if user and user.password_hash == password:
+    payload = {"username": username, "password": password}
+    response = await api_request("POST", "bot/login/", json=payload)
+    if response.get("status") == "success":
         await msg.answer(
             f"Welcome back, {username}!", reply_markup=get_start_keyboard()
         )
+        # Store the token in the state or database if needed
+        await state.update_data(token=response.get("token"))
         await state.clear()
     else:
         await msg.answer(
@@ -171,22 +166,8 @@ async def process_login_password(msg: types.Message, state: FSMContext):
         )
 
 
-@dp.callback_query(F.data == "about")
-async def about(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Provides information about the bot.
-    """
-    await callback.message.edit_text(
-        "This is a finance management bot. You can track your expenses, generate reports, and more.",
-        reply_markup=get_back_to_start_keyboard(),
-    )
-
-
 @dp.callback_query(F.data == "report")
-async def report(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Prompts the user to choose how they would like to receive the report.
-    """
+async def report(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Please choose how you'd like to receive your report or specify the format.",
         reply_markup=get_report_keyboard(),
@@ -194,10 +175,7 @@ async def report(callback: types.CallbackQuery, state: FSMContext):
 
 
 @dp.callback_query(F.data == "get_report")
-async def get_report(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Generates and sends the CSV report to the user.
-    """
+async def get_report(callback: CallbackQuery, state: FSMContext):
     file_path = generate_csv_report()
     try:
         with open(file_path, "rb") as file:
@@ -214,10 +192,7 @@ async def get_report(callback: types.CallbackQuery, state: FSMContext):
 
 
 @dp.callback_query(F.data == "view_expenses")
-async def view_expenses(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Prompts the user to choose a period to view their expenses.
-    """
+async def view_expenses(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Choose the period to view expenses:",
         reply_markup=get_expense_period_keyboard(),
@@ -225,10 +200,7 @@ async def view_expenses(callback: types.CallbackQuery, state: FSMContext):
 
 
 @dp.callback_query(F.data == "add_expense")
-async def add_expense(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Prompts the user to enter expense details.
-    """
+async def add_expense(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Please enter the expense details in the following format:\n\nAmount Description",
         reply_markup=get_back_to_start_keyboard(),
@@ -236,46 +208,8 @@ async def add_expense(callback: types.CallbackQuery, state: FSMContext):
     await state.set_state(Expense.waiting_for_expense_details)
 
 
-@dp.callback_query(F.data == "edit_expense")
-async def edit_expense(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Prompts the user to enter the ID of the expense they want to edit.
-    """
-    await callback.message.edit_text(
-        "Please enter the ID of the expense you want to edit:",
-        reply_markup=get_back_to_start_keyboard(),
-    )
-    await state.set_state(Expense.waiting_for_expense_id)
-
-
-@dp.callback_query(F.data == "delete_expense")
-async def delete_expense(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Prompts the user to enter the ID of the expense they want to delete.
-    """
-    await callback.message.edit_text(
-        "Please enter the ID of the expense you want to delete:",
-        reply_markup=get_back_to_start_keyboard(),
-    )
-    await state.set_state(Expense.waiting_for_expense_id)
-
-
-@dp.callback_query(F.data == "view_history")
-async def view_history(callback: types.CallbackQuery, state: FSMContext):
-    """
-    Informs the user that viewing history is not yet implemented.
-    """
-    await callback.message.edit_text(
-        "Viewing history is not yet implemented.",
-        reply_markup=get_back_to_start_keyboard(),
-    )
-
-
 @dp.message(Expense.waiting_for_expense_details)
-async def process_expense_details(msg: types.Message, state: FSMContext):
-    """
-    Processes the details of an expense entered by the user.
-    """
+async def process_expense_details(msg: Message, state: FSMContext):
     expense_details = msg.text.split(" ", 1)
     if len(expense_details) == 2:
         amount, description = expense_details
@@ -290,12 +224,22 @@ async def process_expense_details(msg: types.Message, state: FSMContext):
 
         user = db_session.query(User).filter_by(username=msg.from_user.username).first()
         if user:
-            expense = Finance(user_id=user.id, amount=amount, description=description)
-            db_session.add(expense)
-            db_session.commit()
-            await msg.answer(
-                "Expense added successfully.", reply_markup=get_start_keyboard()
+            payload = {"amount": amount, "description": description}
+            response = await api_request(
+                "POST",
+                "bot/expense/",
+                json=payload,
+                headers={"Authorization": f"Bearer {user.token}"},
             )
+            if response.get("status") == "success":
+                await msg.answer(
+                    "Expense added successfully.", reply_markup=get_start_keyboard()
+                )
+            else:
+                await msg.answer(
+                    "Failed to add expense. Please try again later.",
+                    reply_markup=get_back_to_start_keyboard(),
+                )
         else:
             await msg.answer(
                 "User not found. Please register or login.",
@@ -309,31 +253,243 @@ async def process_expense_details(msg: types.Message, state: FSMContext):
     await state.clear()
 
 
-@dp.message(Expense.waiting_for_expense_id)
-async def process_expense_id(msg: types.Message, state: FSMContext):
-    """
-    Processes the ID of an expense for editing or deletion.
-    """
+@dp.callback_query(F.data == "update_expense")
+async def update_expense(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Please enter the ID of the expense you want to update, followed by the new details in the format:\n\nID Amount Description",
+        reply_markup=get_back_to_start_keyboard(),
+    )
+    await state.set_state(Expense.waiting_for_update_details)
+
+
+@dp.message(Expense.waiting_for_update_details)
+async def process_update_details(msg: Message, state: FSMContext):
+    update_details = msg.text.split(" ", 2)
+    if len(update_details) == 3:
+        expense_id, amount, description = update_details
+        try:
+            amount = float(amount)
+        except ValueError:
+            await msg.answer(
+                "Invalid amount format. Please enter a valid number.",
+                reply_markup=get_back_to_start_keyboard(),
+            )
+            return
+
+        user = db_session.query(User).filter_by(username=msg.from_user.username).first()
+        if user:
+            payload = {"amount": amount, "description": description}
+            response = await api_request(
+                "PUT",
+                f"bot/expense/{expense_id}/",
+                json=payload,
+                headers={"Authorization": f"Bearer {user.token}"},
+            )
+            if response.get("status") == "success":
+                await msg.answer(
+                    "Expense updated successfully.", reply_markup=get_start_keyboard()
+                )
+            else:
+                await msg.answer(
+                    "Failed to update expense. Please try again later.",
+                    reply_markup=get_back_to_start_keyboard(),
+                )
+        else:
+            await msg.answer(
+                "User not found. Please register or login.",
+                reply_markup=get_start_keyboard(),
+            )
+    else:
+        await msg.answer(
+            "Invalid format. Please use 'ID Amount Description'.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+    await state.clear()
+
+
+@dp.callback_query(F.data == "delete_expense")
+async def delete_expense(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Please enter the ID of the expense you want to delete.",
+        reply_markup=get_back_to_start_keyboard(),
+    )
+    await state.set_state(Expense.waiting_for_delete_id)
+
+
+@dp.message(Expense.waiting_for_delete_id)
+async def process_delete_id(msg: Message, state: FSMContext):
     expense_id = msg.text.strip()
     user = db_session.query(User).filter_by(username=msg.from_user.username).first()
     if user:
-        expense = (
-            db_session.query(Finance).filter_by(id=expense_id, user_id=user.id).first()
+        response = await api_request(
+            "DELETE",
+            f"bot/expense/{expense_id}/",
+            headers={"Authorization": f"Bearer {user.token}"},
         )
-        if expense:
-            db_session.delete(expense)
-            db_session.commit()
+        if response.get("status") == "success":
             await msg.answer(
                 "Expense deleted successfully.", reply_markup=get_start_keyboard()
             )
         else:
             await msg.answer(
-                "Expense not found. Please check the ID and try again.",
+                "Failed to delete expense. Please try again later.",
                 reply_markup=get_back_to_start_keyboard(),
             )
     else:
         await msg.answer(
             "User not found. Please register or login.",
+            reply_markup=get_start_keyboard(),
+        )
+    await state.clear()
+
+
+@dp.callback_query(F.data == "view_incomes")
+async def view_incomes(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Choose the period to view incomes:",
+        reply_markup=get_income_period_keyboard(),
+    )
+
+
+@dp.callback_query(F.data == "add_income")
+async def add_income(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Please enter the income details in the following format:\n\nAmount Description",
+        reply_markup=get_back_to_start_keyboard(),
+    )
+    await state.set_state(Income.waiting_for_income_details)
+
+
+@dp.message(Income.waiting_for_income_details)
+async def process_income_details(msg: Message, state: FSMContext):
+    income_details = msg.text.split(" ", 1)
+    if len(income_details) == 2:
+        amount, description = income_details
+        try:
+            amount = float(amount)
+        except ValueError:
+            await msg.answer(
+                "Invalid amount format. Please enter a valid number.",
+                reply_markup=get_back_to_start_keyboard(),
+            )
+            return
+
+        user = db_session.query(User).filter_by(username=msg.from_user.username).first()
+        if user:
+            payload = {"amount": amount, "description": description}
+            response = await api_request(
+                "POST",
+                "bot/income/",
+                json=payload,
+                headers={"Authorization": f"Bearer {user.token}"},
+            )
+            if response.get("status") == "success":
+                await msg.answer(
+                    "Income added successfully.", reply_markup=get_start_keyboard()
+                )
+            else:
+                await msg.answer(
+                    "Failed to add income. Please try again later.",
+                    reply_markup=get_back_to_start_keyboard(),
+                )
+        else:
+            await msg.answer(
+                "User not found. Please register or login.",
+                reply_markup=get_start_keyboard(),
+            )
+    else:
+        await msg.answer(
+            "Invalid format. Please use 'Amount Description'.",
             reply_markup=get_back_to_start_keyboard(),
+        )
+    await state.clear()
+
+
+@dp.callback_query(F.data == "update_income")
+async def update_income(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Please enter the ID of the income you want to update, followed by the new details in the format:\n\nID Amount Description",
+        reply_markup=get_back_to_start_keyboard(),
+    )
+    await state.set_state(Income.waiting_for_update_details)
+
+
+@dp.message(Income.waiting_for_update_details)
+async def process_update_income(msg: Message, state: FSMContext):
+    update_details = msg.text.split(" ", 2)
+    if len(update_details) == 3:
+        income_id, amount, description = update_details
+        try:
+            amount = float(amount)
+        except ValueError:
+            await msg.answer(
+                "Invalid amount format. Please enter a valid number.",
+                reply_markup=get_back_to_start_keyboard(),
+            )
+            return
+
+        user = db_session.query(User).filter_by(username=msg.from_user.username).first()
+        if user:
+            payload = {"amount": amount, "description": description}
+            response = await api_request(
+                "PUT",
+                f"bot/income/{income_id}/",
+                json=payload,
+                headers={"Authorization": f"Bearer {user.token}"},
+            )
+            if response.get("status") == "success":
+                await msg.answer(
+                    "Income updated successfully.", reply_markup=get_start_keyboard()
+                )
+            else:
+                await msg.answer(
+                    "Failed to update income. Please try again later.",
+                    reply_markup=get_back_to_start_keyboard(),
+                )
+        else:
+            await msg.answer(
+                "User not found. Please register or login.",
+                reply_markup=get_start_keyboard(),
+            )
+    else:
+        await msg.answer(
+            "Invalid format. Please use 'ID Amount Description'.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+    await state.clear()
+
+
+@dp.callback_query(F.data == "delete_income")
+async def delete_income(callback: CallbackQuery, state: FSMContext):
+    await callback.message.edit_text(
+        "Please enter the ID of the income you want to delete.",
+        reply_markup=get_back_to_start_keyboard(),
+    )
+    await state.set_state(Income.waiting_for_delete_id)
+
+
+@dp.message(Income.waiting_for_delete_id)
+async def process_delete_income(msg: Message, state: FSMContext):
+    income_id = msg.text.strip()
+    user = db_session.query(User).filter_by(username=msg.from_user.username).first()
+    if user:
+        response = await api_request(
+            "DELETE",
+            f"bot/income/{income_id}/",
+            headers={"Authorization": f"Bearer {user.token}"},
+        )
+        if response.get("status") == "success":
+            await msg.answer(
+                "Income deleted successfully.", reply_markup=get_start_keyboard()
+            )
+        else:
+            await msg.answer(
+                "Failed to delete income. Please try again later.",
+                reply_markup=get_back_to_start_keyboard(),
+            )
+    else:
+        await msg.answer(
+            "User not found. Please register or login.",
+            reply_markup=get_start_keyboard(),
         )
     await state.clear()
