@@ -1,6 +1,6 @@
 import csv
 import bcrypt
-from db.models import User, db_session
+from db import User, db_session
 
 
 def get_user(username: str):

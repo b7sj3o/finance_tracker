@@ -70,3 +70,12 @@ class Login(StatesGroup):
 class Expense(StatesGroup):
     waiting_for_expense_details = State()
     waiting_for_expense_id = State()
+    waiting_for_delete_id = State()
+    waiting_for_update_details = State()
+
+
+class Income(StatesGroup):
+    waiting_for_income_details = State()
+    waiting_for_income_id = State()
+    waiting_for_delete_id = State()
+    waiting_for_update_details = State()

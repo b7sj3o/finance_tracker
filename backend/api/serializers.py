@@ -1,44 +1,98 @@
+"""
+Serializers for the finance tracker application.
+"""
+
 from rest_framework import serializers
-from .models import User, Income, Expense
 from django.contrib.auth import authenticate
+from .models import User, Expense, Income, Category
 
 
 class UserSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the User model.
+    """
+
     class Meta:
         model = User
         fields = ["id", "username", "password"]
         extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
+        """
+        Create a new user with the given validated data.
+        """
         user = User.objects.create_user(
-            username=validated_data["username"],
-            password=validated_data["password"],
+            username=validated_data["username"], password=validated_data["password"]
         )
         return user
 
 
 class LoginSerializer(serializers.Serializer):
+    """
+    Serializer for user login.
+    """
+
     username = serializers.CharField()
     password = serializers.CharField()
 
     def validate(self, data):
-        username = data.get('username')
-        password = data.get('password')
-        
-        user = authenticate(username=username, password=password)
+        """
+        Validate the login credentials.
+        """
+        user = authenticate(
+            username=data.get("username"), password=data.get("password")
+        )
         if user is None:
-            raise serializers.ValidationError('Invalid username or password')
-        
-        return {'user': user}
-
-
-class IncomeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Income
-        fields = "__all__"
+            raise serializers.ValidationError("Invalid credentials")
+        return {"user": user}
 
 
 class ExpenseSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Expense model.
+    """
+
     class Meta:
         model = Expense
-        fields = "__all__"
+        fields = ["id", "user", "amount", "description", "date"]
+
+    def create(self, validated_data):
+        """
+        Create a new expense with the given validated data.
+        """
+        user = validated_data.pop("user")
+        return Expense.objects.create(user=user, **validated_data)
+
+
+class IncomeSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Income model.
+    """
+
+    class Meta:
+        model = Income
+        fields = ["id", "user", "amount", "description", "date"]
+
+    def create(self, validated_data):
+        """
+        Create a new income with the given validated data.
+        """
+        user = validated_data.pop("user")
+        return Income.objects.create(user=user, **validated_data)
+
+
+class CategorySerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Category model.
+    """
+
+    class Meta:
+        model = Category
+        fields = ["id", "user", "name"]
+
+    def create(self, validated_data):
+        """
+        Create a new category with the given validated data.
+        """
+        user = validated_data.pop("user")
+        return Category.objects.create(user=user, **validated_data)
