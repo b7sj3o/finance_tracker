@@ -1,4 +1,4 @@
-function LoginPage() {
+const LoginPage = () => {
 
   return (
     <>

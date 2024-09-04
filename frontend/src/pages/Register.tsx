@@ -1,4 +1,4 @@
-function RegisterPage() {
+const RegisterPage = () => {
 
     return (
       <>
