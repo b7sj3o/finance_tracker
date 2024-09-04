@@ -1,5 +1,6 @@
 import { FC } from 'react'; // Alias for FunctionComponent
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { NavBar } from './components';
 
 type AppProps = { router: ReturnType<typeof createBrowserRouter> };
 
