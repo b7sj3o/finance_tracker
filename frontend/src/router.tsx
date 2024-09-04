@@ -1,4 +1,4 @@
-// import { LoginPage, RegisterPage } from './pages';
+import { LoginPage, RegisterPage } from './pages';
 import { createBrowserRouter } from "react-router-dom"
 
 export const router = createBrowserRouter([
@@ -7,12 +7,12 @@ export const router = createBrowserRouter([
     element: <div>Hello world!
     </div>,
   },
-//   {
-//     path: "/login",
-//     element: <LoginPage />
-//   },
-//   {
-//     path: '/register',
-//     element: <RegisterPage />
-//   }
+  {
+    path: "/login",
+    element: <LoginPage />
+  },
+  {
+    path: '/register',
+    element: <RegisterPage />
+  }
 ]);
