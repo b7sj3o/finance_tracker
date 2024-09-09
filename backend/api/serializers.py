@@ -54,7 +54,8 @@ class ExpenseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Expense
-        fields = ["id", "user", "amount", "description", "date"]
+        fields = ["id", "amount", "description", "category"]
+
 
     def create(self, validated_data):
         """
@@ -71,7 +72,7 @@ class IncomeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Income
-        fields = ["id", "user", "amount", "description", "date"]
+        fields = ["id", "amount", "description", "category"]
 
     def create(self, validated_data):
         """
@@ -88,7 +89,7 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ["id", "user", "name"]
+        fields = ["id", "name"]
 
     def create(self, validated_data):
         """
