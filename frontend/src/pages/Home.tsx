@@ -1,5 +1,5 @@
 import React from 'react';
-import { notification, userAcc,dollar} from '../assets/images';
+import { notification, userProfileIcon,dollar} from '../assets';
 import { data, COLORS } from '../assets/rechartsData';
 import { PieChart, Pie, Cell, Tooltip,Legend,} from 'recharts';
 
@@ -11,7 +11,7 @@ const HomePage: React.FC = () => {
                     <div className="HomePage-infoBlock flex w-[80%] items-center gap-3">
                         <div className="HomePage-account w-[40px] h-[40px] rounded-full bg-gray-300 ">
                             <a className='w-[100%] h-[100%] flex justify-center items-center' href="#">
-                                <img className="w-[50%] " src={userAcc} alt="User Account Icon" />
+                                <img className="w-[50%] " src={userProfileIcon} alt="User Account Icon" />
                             </a>
                         </div>
                         <div className="HomePage-data">
@@ -39,7 +39,7 @@ const HomePage: React.FC = () => {
                             fill="#8884d8"
                             dataKey="value"
                         >
-                            {data.map((entry, index) => (
+                            {data.map((_, index) => (
                                 <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                             ))}
                         </Pie>
