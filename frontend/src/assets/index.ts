@@ -6,7 +6,9 @@ import graphAnalyticsIcon from './icons/navbar/graph-analysis.png'
 import homeIcon from './icons/navbar/home.png';
 import transactionIcon from './icons/navbar/transaction.png';
 import userProfileIcon from './icons/navbar/userAcc.png';
-import plusIcon from './icons/navbar/userAcc.png';
+import plusIcon from './icons/navbar/plus.png';
 
-export { notification, reactLogo, dollar,
-    graphAnalyticsIcon, homeIcon, transactionIcon, userProfileIcon, plusIcon };
+export { 
+    notification, reactLogo, dollar,
+    graphAnalyticsIcon, homeIcon, transactionIcon, userProfileIcon, plusIcon 
+};
