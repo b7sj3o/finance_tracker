@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-from rest_framework import status
+from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -7,7 +7,7 @@ from rest_framework_simplejwt.authentication import JWTAuthentication
 CONTENT_TYPE_JSON = "application/json"
 
 #TODO дженерики в класах апи вю
-class UserFilteredMixin:
+class UserFilteredMixin(generics.GenericAPIView):
     """
     Mixin to filter queryset by the current user.
     """
