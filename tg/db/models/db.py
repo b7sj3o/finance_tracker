@@ -13,7 +13,6 @@ class User(Base):
         id (int): The unique identifier for the user.
         username (str): The user's username, must be unique.
         email (str): The user's email address, must be unique.
-        password_hash (str): A hashed version of the user's password.
 
     Relationships:
         finances (list of Finance): List of financial records associated with the user.
@@ -24,7 +23,6 @@ class User(Base):
     id = Column(Integer, primary_key=True)
     username = Column(String, unique=True, nullable=False)
     email = Column(String, unique=True, nullable=False)
-    password_hash = Column(String, nullable=False)
 
     finances = relationship("Finance", order_by="Finance.id", back_populates="user")
 

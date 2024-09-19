@@ -3,7 +3,7 @@ import aiohttp
 from aiogram import types, F
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message, CallbackQuery
-from utils.auth_utils import generate_csv_report
+from utils import generate_csv_report
 from keyboards import (
     get_start_keyboard,
     get_report_keyboard,
@@ -11,10 +11,8 @@ from keyboards import (
     get_expense_period_keyboard,
     get_income_period_keyboard,
 )
-from config import dp, Registration, Login, Expense, Income, router
-from db import db_session, User, Finance
-
-API_BASE_URL = "http://your_django_api_url"
+from config import API_BASE_URL, dp, Expense, Income, router
+from db import db_session, User
 
 
 async def api_request(
@@ -43,127 +41,6 @@ async def back_to_start(callback: CallbackQuery, state: FSMContext):
     await callback.message.edit_text(
         "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
     )
-
-
-@dp.callback_query(F.data == "register")
-async def register_start(callback: CallbackQuery, state: FSMContext):
-    await callback.message.edit_text(
-        "Please enter your desired username.", reply_markup=get_back_to_start_keyboard()
-    )
-    await state.set_state(Registration.waiting_for_username)
-
-
-@dp.message(Registration.waiting_for_username)
-async def process_username(msg: Message, state: FSMContext):
-    username = msg.text.strip()
-    if db_session.query(User).filter_by(username=username).first():
-        await msg.answer(
-            "Username already exists. Please choose a different username.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-    else:
-        await state.update_data(username=username)
-        await msg.answer(
-            "Please enter your email address.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-        await state.set_state(Registration.waiting_for_email)
-
-
-@dp.message(Registration.waiting_for_email)
-async def process_email(msg: Message, state: FSMContext):
-    email = msg.text.strip()
-    await state.update_data(email=email)
-    await msg.answer(
-        "Please enter your password.", reply_markup=get_back_to_start_keyboard()
-    )
-    await state.set_state(Registration.waiting_for_password)
-
-
-@dp.message(Registration.waiting_for_password)
-async def process_password(msg: Message, state: FSMContext):
-    password = msg.text.strip()
-    user_data = await state.get_data()
-    username = user_data.get("username")
-    email = user_data.get("email")
-
-    if not username or not email:
-        await msg.answer(
-            "Error: Registration data is incomplete.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-        await state.clear()
-        return
-
-    payload = {"username": username, "email": email, "password": password}
-    response = await api_request("POST", "bot/register/", json=payload)
-    if response.get("status") == "success":
-        await msg.answer(
-            f"User {username} registered successfully.",
-            reply_markup=get_start_keyboard(),
-        )
-        await state.clear()
-    else:
-        await msg.answer(
-            "Registration failed. Please try again later.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-        await state.clear()
-
-
-@dp.callback_query(F.data == "login")
-async def login_start(callback: CallbackQuery, state: FSMContext):
-    await callback.message.edit_text(
-        "Please enter your username.", reply_markup=get_back_to_start_keyboard()
-    )
-    await state.set_state(Login.waiting_for_username)
-
-
-@dp.message(Login.waiting_for_username)
-async def process_login_username(msg: Message, state: FSMContext):
-    username = msg.text.strip()
-    user = db_session.query(User).filter_by(username=username).first()
-    if user:
-        await state.update_data(username=username)
-        await msg.answer(
-            "Please enter your password.", reply_markup=get_back_to_start_keyboard()
-        )
-        await state.set_state(Login.waiting_for_password)
-    else:
-        await msg.answer(
-            "Username not found. Please try again or register.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-
-
-@dp.message(Login.waiting_for_password)
-async def process_login_password(msg: Message, state: FSMContext):
-    password = msg.text.strip()
-    user_data = await state.get_data()
-    username = user_data.get("username")
-
-    if not username:
-        await msg.answer(
-            "Error: Login data is incomplete.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
-        await state.clear()
-        return
-
-    payload = {"username": username, "password": password}
-    response = await api_request("POST", "bot/login/", json=payload)
-    if response.get("status") == "success":
-        await msg.answer(
-            f"Welcome back, {username}!", reply_markup=get_start_keyboard()
-        )
-        # Store the token in the state or database if needed
-        await state.update_data(token=response.get("token"))
-        await state.clear()
-    else:
-        await msg.answer(
-            "Invalid password. Please try again.",
-            reply_markup=get_back_to_start_keyboard(),
-        )
 
 
 @dp.callback_query(F.data == "report")
@@ -229,7 +106,7 @@ async def process_expense_details(msg: Message, state: FSMContext):
                 "POST",
                 "bot/expense/",
                 json=payload,
-                headers={"Authorization": f"Bearer {user.token}"},
+                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -242,7 +119,7 @@ async def process_expense_details(msg: Message, state: FSMContext):
                 )
         else:
             await msg.answer(
-                "User not found. Please register or login.",
+                "User not found. Please register.",
                 reply_markup=get_start_keyboard(),
             )
     else:
@@ -283,7 +160,7 @@ async def process_update_details(msg: Message, state: FSMContext):
                 "PUT",
                 f"bot/expense/{expense_id}/",
                 json=payload,
-                headers={"Authorization": f"Bearer {user.token}"},
+                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -296,7 +173,7 @@ async def process_update_details(msg: Message, state: FSMContext):
                 )
         else:
             await msg.answer(
-                "User not found. Please register or login.",
+                "User not found. Please register.",
                 reply_markup=get_start_keyboard(),
             )
     else:
@@ -324,7 +201,7 @@ async def process_delete_id(msg: Message, state: FSMContext):
         response = await api_request(
             "DELETE",
             f"bot/expense/{expense_id}/",
-            headers={"Authorization": f"Bearer {user.token}"},
+            # Assuming you don't need authorization headers without login
         )
         if response.get("status") == "success":
             await msg.answer(
@@ -337,7 +214,7 @@ async def process_delete_id(msg: Message, state: FSMContext):
             )
     else:
         await msg.answer(
-            "User not found. Please register or login.",
+            "User not found. Please register.",
             reply_markup=get_start_keyboard(),
         )
     await state.clear()
@@ -381,7 +258,7 @@ async def process_income_details(msg: Message, state: FSMContext):
                 "POST",
                 "bot/income/",
                 json=payload,
-                headers={"Authorization": f"Bearer {user.token}"},
+                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -394,7 +271,7 @@ async def process_income_details(msg: Message, state: FSMContext):
                 )
         else:
             await msg.answer(
-                "User not found. Please register or login.",
+                "User not found. Please register.",
                 reply_markup=get_start_keyboard(),
             )
     else:
@@ -435,7 +312,7 @@ async def process_update_income(msg: Message, state: FSMContext):
                 "PUT",
                 f"bot/income/{income_id}/",
                 json=payload,
-                headers={"Authorization": f"Bearer {user.token}"},
+                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -448,7 +325,7 @@ async def process_update_income(msg: Message, state: FSMContext):
                 )
         else:
             await msg.answer(
-                "User not found. Please register or login.",
+                "User not found. Please register.",
                 reply_markup=get_start_keyboard(),
             )
     else:
@@ -476,7 +353,6 @@ async def process_delete_income(msg: Message, state: FSMContext):
         response = await api_request(
             "DELETE",
             f"bot/income/{income_id}/",
-            headers={"Authorization": f"Bearer {user.token}"},
         )
         if response.get("status") == "success":
             await msg.answer(
@@ -489,7 +365,7 @@ async def process_delete_income(msg: Message, state: FSMContext):
             )
     else:
         await msg.answer(
-            "User not found. Please register or login.",
+            "User not found. Please register.",
             reply_markup=get_start_keyboard(),
         )
     await state.clear()
