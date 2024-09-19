@@ -1,5 +1,13 @@
+"""
+This module provides utility functions for user authentication
+and report generation, including registration, login, and 
+report generation in CSV and XLSX formats.
+"""
+
 import csv
 import bcrypt
+import openpyxl
+
 from db import User, db_session
 
 
@@ -64,9 +72,7 @@ def login_user(username: str, password: str):
         bool: True if the username and password match a user in the database, False otherwise.
     """
     user = get_user(username)
-    if user and check_password(user, password):
-        return True
-    return False
+    return user and check_password(user, password)
 
 
 def get_all_users():
@@ -88,9 +94,34 @@ def generate_csv_report():
     Returns:
         str: The path to the generated CSV report file.
     """
-    with open("report.csv", "w", newline="") as file:
+    file_path = "report.csv"
+    with open(file_path, "w", newline="", encoding="utf-8") as file:
         writer = csv.writer(file)
         writer.writerow(["ID", "Username", "Email", "Balance"])
         for user in get_all_users():
             writer.writerow([user.id, user.username, user.email, "Balance Placeholder"])
-    return "report.csv"
+    return file_path
+
+
+def generate_xlsx_report():
+    """
+    Generates an XLSX report of all users in the database and saves it to a file.
+
+    The XLSX file includes the user's ID, username, email, and a placeholder for balance.
+
+    Returns:
+        str: The path to the generated XLSX report file.
+    """
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    sheet.title = "User Report"
+
+    headers = ["ID", "Username", "Email", "Balance"]
+    sheet.append(headers)
+
+    for user in get_all_users():
+        sheet.append([user.id, user.username, user.email, "Balance Placeholder"])
+
+    file_path = "report.xlsx"
+    workbook.save(file_path)
+    return file_path
