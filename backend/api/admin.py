@@ -1,15 +1,14 @@
 from django.contrib import admin
 from .models import User, Income, Expense, Category
-from datetime import datetime
 
 
 @admin.register(Income, Expense)
-class IncomeAdmin(admin.ModelAdmin):
+class TransferingAdmin(admin.ModelAdmin):
     list_display = ["amount", "description_short", "category", "created_formatted", "updated_formatted"]
 
     @admin.display(description='Description')
     def description_short(self, obj):
-        return obj.description[:15]
+        return obj.description[:15] if len(obj.description) >= 15 else obj.description
 
     @admin.display(description='Created')
     def created_formatted(self, obj):
