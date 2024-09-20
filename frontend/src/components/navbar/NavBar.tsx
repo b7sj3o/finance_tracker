@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { graphAnalyticsIcon, homeIcon, transactionIcon, plusIcon, userProfileIcon } from '../../assets';
+import { graphAnalyticsIcon, homeIcon, transactionIcon, plusIcon } from '../../assets';
 import NavButton from './NavButton';
 
 const NavBar: React.FC = () => {
@@ -11,7 +11,6 @@ const NavBar: React.FC = () => {
           <NavButton icon={graphAnalyticsIcon} label="Insight" path="/insight" />
           <NavButton icon={plusIcon} path="/add-transaction" />
           <NavButton icon={transactionIcon} label="Finance" path="/transactions" />
-          <NavButton icon={userProfileIcon} label="Profile" path="profile" />
         </ul>
       </nav>
       <Outlet />

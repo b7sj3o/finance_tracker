@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { InsightTable } from '../components';
 
 const InsightPage = () => {
-  const [selected, setSelected] = useState('income');
+  const [selected, setSelected] = useState<'income' | 'expense'>('income');
+  const currentSelection = selected === 'income' ? 'income' : 'expense';
 
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState<string>("Month");
@@ -20,7 +22,7 @@ const InsightPage = () => {
   return (
     <>
     <header>
-    <section className="flex justify-between items-center w-full py-4 px-6">
+    <section className="flex justify-between items-center w-full py-4 px-6 mt-2">
       <h1 className="text-2xl font-semibold">Insights</h1>
       <div className="relative inline-block">
         <button
@@ -60,7 +62,7 @@ const InsightPage = () => {
       </div>
     </section>
 
-    <section className="flex space-x-4 bg-gray-300 bg-opacity-60 rounded-full p-1">
+    <section className="flex space-x-4 bg-gray-300 bg-opacity-60 rounded-full p-1 mb-6">
       {/* Incomes Button */}
         <div
             onClick={() => setSelected('income')}
@@ -88,9 +90,9 @@ const InsightPage = () => {
 
       {/* Expenses Button */}
       <div
-        onClick={() => setSelected('expenses')}
+        onClick={() => setSelected('expense')}
         className={`flex items-center space-x-2 rounded-full py-2 px-4 cursor-pointer transition-all duration-300 ease-in-out ${
-          selected === 'expenses' ? 'bg-slate-50' : ''
+          selected === 'expense' ? 'bg-slate-50' : ''
         }`}
       >
         <div className="bg-red-300 rounded-full p-2">
@@ -112,6 +114,9 @@ const InsightPage = () => {
       </div>
     </section>
     </header>
+    <main>
+        <InsightTable chartType={currentSelection}/>
+    </main>
     </>
   );
 }
