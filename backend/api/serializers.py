@@ -2,7 +2,8 @@
 Serializers for the finance tracker application.
 """
 
-from rest_framework import serializers
+from rest_framework import serializers, status
+from rest_framework.response import Response
 from django.contrib.auth import authenticate
 from .models import User, Expense, Income, Category
 
@@ -63,8 +64,8 @@ class ExpenseSerializer(serializers.ModelSerializer):
         """
         user = validated_data.pop("user")
         return Expense.objects.create(user=user, **validated_data)
-
-
+    
+    
 class IncomeSerializer(serializers.ModelSerializer):
     """
     Serializer for the Income model.

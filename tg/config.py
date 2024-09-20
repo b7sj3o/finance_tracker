@@ -54,7 +54,17 @@ storage = MemoryStorage()
 dp = Dispatcher(storage=storage)
 dp.update.middleware(LoggingMiddleware())
 router = Router()
-API_BASE_URL = "https://127.0.0.1:8000/api/"
+
+
+class Registration(StatesGroup):
+    waiting_for_username = State()
+    waiting_for_email = State()
+    waiting_for_password = State()
+
+
+class Login(StatesGroup):
+    waiting_for_username = State()
+    waiting_for_password = State()
 
 
 class Expense(StatesGroup):

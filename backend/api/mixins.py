@@ -2,11 +2,10 @@ from django.shortcuts import get_object_or_404
 from rest_framework import status, generics
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
-from rest_framework_simplejwt.authentication import JWTAuthentication
+# from rest_framework_simplejwt.authentication import JWTAuthentication
 
 CONTENT_TYPE_JSON = "application/json"
 
-#TODO дженерики в класах апи вю
 class UserFilteredMixin(generics.GenericAPIView):
     """
     Mixin to filter queryset by the current user.
@@ -40,15 +39,6 @@ class ContentTypeValidationMixin:
                 status=status.HTTP_415_UNSUPPORTED_MEDIA_TYPE,
             )
         return None
-
-
-class AuthMixin:
-    """
-    Mixin to add authentication and permission classes to views.
-    """
-
-    authentication_classes = [JWTAuthentication]
-    permission_classes = [IsAuthenticated]
 
 
 class ListMixin:
