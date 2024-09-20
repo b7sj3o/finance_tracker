@@ -20,7 +20,7 @@ const InsightPage = () => {
   return (
     <>
     <header>
-    <div className="flex justify-between items-center w-full py-4 px-6">
+    <section className="flex justify-between items-center w-full py-4 px-6">
       <h1 className="text-2xl font-semibold">Insights</h1>
       <div className="relative inline-block">
         <button
@@ -58,37 +58,36 @@ const InsightPage = () => {
           </ul>
         )}
       </div>
-    </div>
-    </header>
+    </section>
 
-    <main className="flex space-x-4 bg-gray-300 bg-opacity-60 rounded-full p-1">
+    <section className="flex space-x-4 bg-gray-300 bg-opacity-60 rounded-full p-1">
       {/* Incomes Button */}
-      <section
-        onClick={() => setSelected('income')}
-        className={`flex items-center space-x-2 rounded-full py-2 px-4 cursor-pointer transition-all duration-300 ease-in-out ${
-          selected === 'income' ? 'bg-slate-50' : ''
-        }`}
-      >
-        <div className="bg-green-300 rounded-full p-2">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-6 w-6 text-white"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth="2"
-          >
-            <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
-          </svg>
+        <div
+            onClick={() => setSelected('income')}
+            className={`flex items-center space-x-2 rounded-full py-2 px-4 cursor-pointer transition-all duration-300 ease-in-out ${
+            selected === 'income' ? 'bg-slate-50' : ''
+            }`}
+        >
+            <div className="bg-green-300 rounded-full p-2">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6 text-white"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth="2"
+            >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            </div>
+            <div>
+            <p className="text-xs text-gray-500">Income</p>
+            <p className="text-lg font-semibold">$2,239.87</p>
+            </div>
         </div>
-        <div>
-          <p className="text-xs text-gray-500">Income</p>
-          <p className="text-lg font-semibold">$2,239.87</p>
-        </div>
-      </section>
 
       {/* Expenses Button */}
-      <section
+      <div
         onClick={() => setSelected('expenses')}
         className={`flex items-center space-x-2 rounded-full py-2 px-4 cursor-pointer transition-all duration-300 ease-in-out ${
           selected === 'expenses' ? 'bg-slate-50' : ''
@@ -110,12 +109,9 @@ const InsightPage = () => {
           <p className="text-xs text-gray-500">Expenses</p>
           <p className="text-lg font-semibold">$1,234.75</p>
         </div>
-      </section>
-    </main>
-
-    <div className="w-1/2">
-        <canvas id="barChart"></canvas>
-    </div>
+      </div>
+    </section>
+    </header>
     </>
   );
 }
