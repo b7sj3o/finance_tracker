@@ -6,12 +6,10 @@ def get_start_keyboard() -> InlineKeyboardMarkup:
     Creates the start keyboard with options for user actions.
 
     Returns:
-        InlineKeyboardMarkup: An inline keyboard markup with options for registration, login, and other actions.
+        InlineKeyboardMarkup: An inline keyboard markup with options for report generation, viewing and managing expenses, and other actions.
     """
     return InlineKeyboardMarkup(
         inline_keyboard=[
-            [InlineKeyboardButton(text="Register", callback_data="register")],
-            [InlineKeyboardButton(text="Login", callback_data="login")],
             [InlineKeyboardButton(text="About", callback_data="about")],
             [InlineKeyboardButton(text="Report", callback_data="report")],
             [InlineKeyboardButton(text="View Expenses", callback_data="view_expenses")],
@@ -23,21 +21,6 @@ def get_start_keyboard() -> InlineKeyboardMarkup:
                 )
             ],
             [InlineKeyboardButton(text="View History", callback_data="view_history")],
-        ]
-    )
-
-
-def get_login_keyboard() -> InlineKeyboardMarkup:
-    """
-    Creates a keyboard with options for logging in.
-
-    Returns:
-        InlineKeyboardMarkup: An inline keyboard markup with options for logging in or returning to the start menu.
-    """
-    return InlineKeyboardMarkup(
-        inline_keyboard=[
-            [InlineKeyboardButton(text="Login", callback_data="login")],
-            [InlineKeyboardButton(text="Back to Start", callback_data="start")],
         ]
     )
 
