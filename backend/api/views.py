@@ -19,12 +19,13 @@ from .mixins import (
     UserFilteredMixin,
     ContentTypeValidationMixin,
     # AuthMixin,
-    ListMixin,
+    #ListMixin,
     CreateMixin,
-    RetrieveMixin,
-    UpdateMixin,
-    DeleteMixin,
+    #RetrieveMixin,
+    #UpdateMixin,
+    #DeleteMixin,
 )
+
 
 class BaseCRUDView(
     ContentTypeValidationMixin,
@@ -34,44 +35,38 @@ class BaseCRUDView(
     mixins.RetrieveModelMixin,
     mixins.UpdateModelMixin,
     mixins.DestroyModelMixin,
-    generics.GenericAPIView    
+    generics.GenericAPIView,
 ):
     """
     Base CRUD View for executing simple operations described in CRUD
-    
+
     required fields:
     queryset = *Model*.objects.all()
     serializer_class = *ModelSerializer*
     """
-    
-        
+
     def get(self, request, *args, **kwargs):
         return self.operation(request, *args, **kwargs)
 
-    
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
-    
     def put(self, request, *args, **kwargs):
         return self.operation(request, *args, **kwargs)
 
-
     def patch(self, request, *args, **kwargs):
         return self.operation(request, *args, **kwargs)
-    
-    
+
     def delete(self, request, *args, **kwargs):
         return self.operation(request, *args, **kwargs)
 
-    
     def operation(self, request, *args, **kwargs):
         methods = {
             "GET": "retrieve",
             "POST": "create",
             "PUT": "update",
             "PATCH": "partial_update",
-            "DELETE": "destroy"
+            "DELETE": "destroy",
         }
         method = methods[request.method]
         if "pk" in kwargs:
@@ -81,10 +76,12 @@ class BaseCRUDView(
             return response
         return self.list(request, *args, **kwargs)
 
+
 class UserCreateView(ContentTypeValidationMixin, generics.CreateAPIView):
     """
     Create a new user with content type validation.
     """
+
     queryset = User.objects.all()
     permission_classes = [AllowAny]
     serializer_class = UserSerializer
@@ -94,6 +91,7 @@ class LoginView(ContentTypeValidationMixin, CreateMixin, generics.GenericAPIView
     """
     Log in a user and set a session cookie.
     """
+
     permission_classes = [AllowAny]
     serializer_class = LoginSerializer
 
@@ -121,14 +119,13 @@ class LoginView(ContentTypeValidationMixin, CreateMixin, generics.GenericAPIView
 class ExpenseView(BaseCRUDView):
     queryset = Expense.objects.all()
     serializer_class = ExpenseSerializer
-    
+
 
 class IncomeView(BaseCRUDView):
     queryset = Income.objects.all()
     serializer_class = IncomeSerializer
-    
+
 
 class CategoryView(BaseCRUDView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    
