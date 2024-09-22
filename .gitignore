@@ -7,3 +7,6 @@
 *key.pem
 *cert.pem
 *.log
+*node_modules
+*.env
+*migrations*

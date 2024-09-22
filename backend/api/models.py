@@ -4,7 +4,7 @@ from django.core.validators import MinValueValidator
 from decimal import Decimal
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, password=None):
+    def create_user(self, username, email=None, password=None):
         if not username:
             raise ValueError("Users must have a username")
         user = self.model(username=username)
@@ -24,11 +24,24 @@ class User(AbstractUser):
     username = models.CharField(max_length=50,unique=True)
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
-
+    email = models.EmailField(max_length=254)
+    chat_id = models.IntegerField(unique=True,  null=True, blank=True)
+    balance = models.FloatField(default=0)
     objects = UserManager()
 
     USERNAME_FIELD = "username"
 
+    def update_balance(self) -> float:
+        expenses = sum(expense.amount for expense in self.expense_set.all())
+        incomes = sum(income.amount for income in self.income_set.all())
+        
+        self.balance = round(incomes - expenses, 2) 
+        self.save()
+        
+        return self.balance
+    
+    def __str__(self) -> str:
+        return self.username
 
 class Category(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
