@@ -56,7 +56,6 @@ class Finance(BaseModel):
     user = relationship("User", back_populates="finances")
 
 
-# Database setup
 engine = create_engine("sqlite:///finance.db")
 Base.metadata.create_all(engine)
 
