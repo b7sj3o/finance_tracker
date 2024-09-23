@@ -1,8 +1,9 @@
-from sqlalchemy import create_engine, Integer, String, Float, ForeignKey
+from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 
 Base = declarative_base()
+
 
 class BaseModel(Base):
     """
@@ -10,7 +11,8 @@ class BaseModel(Base):
     """
     __abstract__ = True
 
-    id = Base.Column(Integer, primary_key=True)
+    id = Column(Integer, primary_key=True)
+
 
 class User(BaseModel):
     """
@@ -26,8 +28,8 @@ class User(BaseModel):
 
     __tablename__ = "users"
 
-    username = Base.Column(String, unique=True, nullable=False)
-    email = Base.Column(String, unique=True, nullable=False)
+    username = Column(String, unique=True, nullable=False)
+    email = Column(String, unique=True, nullable=False)
 
     finances = relationship("Finance", order_by="Finance.id", back_populates="user")
 
@@ -47,13 +49,14 @@ class Finance(BaseModel):
 
     __tablename__ = "finances"
 
-    user_id = Base.Column(Integer, ForeignKey("users.id"), nullable=False)
-    balance = Base.Column(Float, nullable=False)
-    currency = Base.Column(String, nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    balance = Column(Float, nullable=False)
+    currency = Column(String, nullable=False)
 
     user = relationship("User", back_populates="finances")
 
 
+# Database setup
 engine = create_engine("sqlite:///finance.db")
 Base.metadata.create_all(engine)
 
