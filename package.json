@@ -1,8 +1,0 @@
-{
-  "dependencies": {
-    "@types/react-router-dom": "^5.3.3",
-    "chart.js": "^4.4.4",
-    "react-router-dom": "^6.26.0",
-    "recharts": "^2.12.7"
-  }
-}
