@@ -106,7 +106,6 @@ async def process_expense_details(msg: Message, state: FSMContext):
                 "POST",
                 "bot/expense/",
                 json=payload,
-                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -160,7 +159,6 @@ async def process_update_details(msg: Message, state: FSMContext):
                 "PUT",
                 f"bot/expense/{expense_id}/",
                 json=payload,
-                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(
@@ -201,7 +199,6 @@ async def process_delete_id(msg: Message, state: FSMContext):
         response = await api_request(
             "DELETE",
             f"bot/expense/{expense_id}/",
-            # Assuming you don't need authorization headers without login
         )
         if response.get("status") == "success":
             await msg.answer(
@@ -258,7 +255,6 @@ async def process_income_details(msg: Message, state: FSMContext):
                 "POST",
                 "bot/income/",
                 json=payload,
-                # Assuming you don't need authorization headers without login
             )
             if response.get("status") == "success":
                 await msg.answer(

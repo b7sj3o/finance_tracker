@@ -8,17 +8,20 @@ from dotenv import load_dotenv
 from aiogram.enums import ParseMode
 from aiogram.client.bot import DefaultBotProperties
 from aiogram.fsm.state import State, StatesGroup
-
+from pathlib import Path
 
 load_dotenv()
 
-if not os.path.exists("logs"):
-    os.makedirs("logs")
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+logs_dir = BASE_DIR / "logs"
+if not logs_dir.exists():
+    logs_dir.mkdir(parents=True)
 
 logger = logging.getLogger("aiogram")
 logger.setLevel(logging.DEBUG)
 
-file_handler = logging.FileHandler("logs/bot.log", encoding="utf-8")
+file_handler = logging.FileHandler(logs_dir / "bot.log", encoding="utf-8")
 file_handler.setLevel(logging.DEBUG)
 file_formatter = logging.Formatter(
     "%(asctime)s - %(name)s - %(levelname)s - %(message)s", datefmt="%Y-%m-%d %H:%M:%S"
