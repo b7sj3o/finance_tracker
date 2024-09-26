@@ -9,6 +9,7 @@ from rest_framework.permissions import AllowAny
 from rest_framework.views import APIView
 from typing import Union
 from django.db.models import Sum, QuerySet
+import openpyxl
 import csv
 from datetime import datetime, timedelta
 
@@ -162,6 +163,7 @@ class GenerateCSVReportView(generics.RetrieveAPIView):
                 key=lambda transfer: transfer.created
             )
             
+            csv_titles = ["Data", "Type", "Amount", "Description", "Category"]
             csv_rows = (
                 [
                     transfer.created.strftime("%d.%m.%Y, %H:%M:%S"),
@@ -170,25 +172,76 @@ class GenerateCSVReportView(generics.RetrieveAPIView):
                     transfer.description or "-",
                     transfer.category or "-"
                 ] for transfer in transfers
-            ) 
+            )
             
             
-            with open(f"{request.user.username}-report.csv", "w", newline="") as file:
+            with open(f"../reports/{request.user.chat_id}-report.csv", "w", newline="") as file:
                 writer = csv.writer(file)
-                writer.writerow(["Data", "Type", "Amount", "Description", "Category"])
+                writer.writerow(csv_titles)
                 writer.writerows(csv_rows)
             
 
-            return Response(data={"message": "report.csv"}, status=status.HTTP_201_CREATED)
+            return Response(data={"message": f"{request.user.chat_id}-report.csv"}, status=status.HTTP_201_CREATED)
                 
         except User.DoesNotExist:
             return Response(data={"message": "User not found"}, status=status.HTTP_404_NOT_FOUND)
-
+        
         except Exception as ex:
             return Response(data={"message": f"{ex}"}, status=status.HTTP_400_BAD_REQUEST)
         
 
-class GenerateTimeView:
+class GenerateExcelReportView(generics.RetrieveAPIView):
+    def get(self, request, *args, **kwargs):
+        
+        try:
+            user = request.user
+        
+            expenses = request.user.expense_set.all().order_by("created")
+            incomes = request.user.income_set.all().order_by("created")
+            
+            transfers = sorted(
+                list(expenses) + list(incomes),
+                key=lambda transfer: transfer.created
+            )
+            
+            excel_titles = ["Data", "Type", "Amount", "Description", "Category"]
+            excel_rows = (
+                [
+                    transfer.created.strftime("%d.%m.%Y, %H:%M:%S"),
+                    transfer.__class__.__name__,
+                    transfer.amount,
+                    transfer.description or "-",
+                    transfer.category or "-"
+                ] for transfer in transfers
+            )
+            
+            # with open(f"../reports/{user.chat_id}-report.excel", "w+", newline="") as file:
+            excel_file = openpyxl.Workbook()
+            excel_file_list = excel_file.active
+            
+            excel_file_list.column_dimensions['A'].width = 20  # Дата
+            excel_file_list.column_dimensions['B'].width = 10  # Тип (Expense | Income)
+            excel_file_list.column_dimensions['C'].width = 7  # Сума
+            excel_file_list.column_dimensions['D'].width = 30  # Опис
+            excel_file_list.column_dimensions['E'].width = 20  # Категорія
+            
+            excel_file_list.append(excel_titles)
+            
+            for row in excel_rows:
+                excel_file_list.append(row)            
+            
+            excel_file.save(f"../reports/{user.chat_id}-report.xlsx")
+            
+            return Response(data={"message": f"{user.chat_id}-report.excel"}, status=status.HTTP_200_OK)
+        
+        except User.DoesNotExist:
+            return Response(data={"message": "User not found"}, status=status.HTTP_404_NOT_FOUND)
+        
+        except Exception as ex:
+            return Response(data={"message": f"{ex}"}, status=status.HTTP_400_BAD_REQUEST)
+            
+
+class GenerateTransfersView:
     
     @staticmethod
     def generate_time(request, transfer_type: Union[Income, Expense], days: int, *args, **kwargs):
@@ -215,7 +268,7 @@ class GenerateTimeView:
                 time_transfers.append({
                     "period": time_period,
                     "total_amount": total_amount,
-                    "days": GenerateTimeView.count_transfers_by_day(transfers, days, start_of_week)
+                    "days": GenerateTransfersView.count_transfers_by_day(transfers, days, start_of_week)
                 })
                 
             start_of_week = end_of_week + timedelta(days=1)
@@ -244,24 +297,24 @@ class WeeklyExpensesView(generics.RetrieveAPIView):
     queryset = Expense.objects.all()
     
     def get(self, request, *args, **kwargs):
-        return GenerateTimeView.generate_time(request, Expense, 7, args, kwargs)
+        return GenerateTransfersView.generate_time(request, Expense, 7, args, kwargs)
     
     
 class MonthlyExpensesView(generics.RetrieveAPIView):
     
     def get(self, request, *args, **kwargs):
-        return GenerateTimeView.generate_time(request, Expense, 30, args, kwargs)
+        return GenerateTransfersView.generate_time(request, Expense, 30, args, kwargs)
             
 
 class WeeklyIncomesView(generics.RetrieveAPIView):
     
     def get(self, request, *args, **kwargs):
-        return GenerateTimeView.generate_time(request, Income, 7, args, kwargs)
+        return GenerateTransfersView.generate_time(request, Income, 7, args, kwargs)
     
     
 class MonthlyIncomesView(generics.RetrieveAPIView):
     
     def get(self, request, *args, **kwargs):
-        return GenerateTimeView.generate_time(request, Income, 30, args, kwargs)
+        return GenerateTransfersView.generate_time(request, Income, 30, args, kwargs)
     
 
