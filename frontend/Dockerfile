@@ -18,4 +18,4 @@ RUN npm run build
 
 
 # # Запускаємо додаток
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

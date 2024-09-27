@@ -4,17 +4,20 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "3000:3000"
+      - "5173:5173"
     depends_on:
       - backend
-    # volumes:
-      # - .:/app
+    volumes:
+      - ./frontend:/app
+
   backend:
     build:
       context: ./backend
       dockerfile: Dockerfile
     ports:
       - "8000:8000"
+    volumes:
+      - ./backend:/app
 
   bot:
     build:
@@ -22,4 +25,6 @@ services:
       dockerfile: Dockerfile
     depends_on:
       - backend
+    volumes:
+      - ./bot:/app
     
