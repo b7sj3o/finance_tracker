@@ -4,8 +4,6 @@ from api.models import Income, Expense, User, Category
 from api.admin import TransferingAdmin
 from datetime import datetime
 
-class MockRequest:
-    pass
 
 class AdminTest(TestCase):
 
