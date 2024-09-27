@@ -2,6 +2,7 @@
 This module contains validation functions for the finance tracker bot.
 """
 
+from sqlalchemy.sql import text
 from db import db_session
 
 
@@ -37,11 +38,12 @@ async def validate_user_exists(username: str):
     Returns:
         bool: True if the user exists, False otherwise.
     """
-    async with db_session() as session:
-        user = await session.execute(
-            "SELECT * FROM users WHERE username = :username", {"username": username}
+    with db_session as session:
+        result =  session.execute(
+            text("SELECT * FROM users WHERE username = :username"),
+            {"username": username},
         )
-        return user.scalar() is not None
+        return result.scalar() is not None
 
 
 async def validate_expense_id(expense_id: str):
@@ -54,11 +56,11 @@ async def validate_expense_id(expense_id: str):
     Returns:
         bool: True if the expense ID exists, False otherwise.
     """
-    async with db_session() as session:
-        expense = await session.execute(
-            "SELECT * FROM expenses WHERE id = :id", {"id": expense_id}
+    with db_session as session:
+        result =  session.execute(
+            text("SELECT * FROM expenses WHERE id = :id"), {"id": expense_id}
         )
-        return expense.scalar() is not None
+        return result.scalar() is not None
 
 
 async def validate_income_id(income_id: str):
@@ -71,14 +73,14 @@ async def validate_income_id(income_id: str):
     Returns:
         bool: True if the income ID exists, False otherwise.
     """
-    async with db_session() as session:
-        income = await session.execute(
-            "SELECT * FROM incomes WHERE id = :id", {"id": income_id}
+    with db_session as session:
+        result =  session.execute(
+            text("SELECT * FROM incomes WHERE id = :id"), {"id": income_id}
         )
-        return income.scalar() is not None
+        return result.scalar() is not None
 
 
-async def validate_message_not_empty(message):
+async def validate_message_not_empty(message: str):
     """
     Validates if the message is not empty.
 
