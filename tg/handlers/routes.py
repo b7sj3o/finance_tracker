@@ -21,6 +21,7 @@ from config import (
     API_ENDPOINT_INCOME,
     API_ENDPOINT_EXPENSE,
     MAX_AMOUNT,
+    router
 )
 from .validators import (
     validate_amount_description,
@@ -30,6 +31,7 @@ from .validators import (
     validate_message_not_empty,
 )
 from .aio_client import handle_api_request
+
 
 
 @dp.message(F.text == "/start")

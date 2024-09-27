@@ -2,7 +2,6 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
   "scripts": {
     "start": "concurrently \"npm run server\" \"npm run tg\" \"npm run client\"",
     "client": "VITE_CJS_IGNORE_WARNING=true vite",
@@ -22,7 +21,7 @@
     "react": "^18.3.1",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.1",
+    "react-router-dom": "^6.26.2",
     "recharts": "^2.12.7"
   },
   "devDependencies": {
