@@ -76,3 +76,16 @@ async def validate_income_id(income_id: str):
             "SELECT * FROM incomes WHERE id = :id", {"id": income_id}
         )
         return income.scalar() is not None
+
+
+async def validate_message_not_empty(message):
+    """
+    Validates if the message is not empty.
+
+    Args:
+        message (str): The message to check.
+
+    Returns:
+        bool: True if the message is not empty, False otherwise.
+    """
+    return bool(message.strip())

@@ -1,4 +1,4 @@
-from .config import dp, bot, API_BASE_URL
+from .config import dp, bot, API_BASE_URL, API_ENDPOINT_EXPENSE, API_ENDPOINT_INCOME, MAX_AMOUNT
 from .utils import (
     generate_csv_report,
     get_all_users,

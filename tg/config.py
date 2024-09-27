@@ -58,6 +58,9 @@ dp = Dispatcher(storage=storage)
 dp.update.middleware(LoggingMiddleware())
 router = Router()
 API_BASE_URL = "https://127.0.0.1:8000/api/"
+API_ENDPOINT_EXPENSE = "expense/"
+API_ENDPOINT_INCOME = "income/"
+MAX_AMOUNT = 10000000
 
 
 class Expense(StatesGroup):

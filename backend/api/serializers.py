@@ -57,15 +57,14 @@ class ExpenseSerializer(serializers.ModelSerializer):
         model = Expense
         fields = ["id", "amount", "description", "category"]
 
-
     def create(self, validated_data):
         """
         Create a new expense with the given validated data.
         """
         user = validated_data.pop("user")
         return Expense.objects.create(user=user, **validated_data)
-    
-    
+
+
 class IncomeSerializer(serializers.ModelSerializer):
     """
     Serializer for the Income model.

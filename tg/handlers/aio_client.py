@@ -1,9 +1,13 @@
 """
-This module handles the routes for the Telegram bot.
+This module handles the API requests for the Telegram bot.
 """
 
 import aiohttp
 from config import API_BASE_URL
+from keyboards import (
+    get_start_keyboard,
+    get_back_to_start_keyboard,
+)
 
 
 async def api_request(
@@ -20,8 +24,37 @@ async def api_request(
 
     Returns:
         dict: JSON response from the API.
+
+    Raises:
+        Exception: Raises an exception for HTTP errors or connection issues.
     """
-    async with aiohttp.ClientSession() as session:
-        url = f"{API_BASE_URL}/{endpoint}"
-        async with session.request(method, url, json=json, headers=headers) as response:
-            return await response.json()
+    url = f"{API_BASE_URL}/{endpoint}"
+    try:
+        async with aiohttp.ClientSession() as session:
+            async with session.request(
+                method, url, json=json, headers=headers
+            ) as response:
+                response.raise_for_status()
+                return await response.json()
+    except aiohttp.ClientError as e:
+        raise Exception(f"Network error occurred: {str(e)}")
+    except aiohttp.http_exceptions.HttpProcessingError as e:
+        raise Exception(f"HTTP error occurred: {str(e)}")
+    except Exception as e:
+        raise Exception(f"An unexpected error occurred: {str(e)}")
+
+
+async def handle_api_request(
+    method, endpoint, payload, success_message, error_message, msg
+):
+    try:
+        response = await api_request(method, endpoint, json=payload)
+        if response.get("status") == "success":
+            await msg.answer(success_message, reply_markup=get_start_keyboard())
+        else:
+            raise Exception(error_message)
+    except Exception as e:
+        await msg.answer(
+            f"Error: {str(e)}. Please try again later.",
+            reply_markup=get_back_to_start_keyboard(),
+        )

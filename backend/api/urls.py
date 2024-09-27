@@ -11,7 +11,7 @@ from .views import (
     MonthlyExpensesView,
     WeeklyIncomesView,
     MonthlyIncomesView,
-    GenerateExcelReportView
+    GenerateExcelReportView,
 )
 
 urlpatterns = [
@@ -24,8 +24,16 @@ urlpatterns = [
     path("category/", CategoryView.as_view(), name="category"),
     path("category/<int:pk>", CategoryView.as_view(), name="category"),
     path("get_user/", GetUserView.as_view(), name="get_user"),
-    path("generate_csv_report/", GenerateCSVReportView.as_view(), name="generate_csv_report"),
-    path("generate_excel_report/", GenerateExcelReportView.as_view(), name="generate_excel_report"),
+    path(
+        "generate_csv_report/",
+        GenerateCSVReportView.as_view(),
+        name="generate_csv_report",
+    ),
+    path(
+        "generate_excel_report/",
+        GenerateExcelReportView.as_view(),
+        name="generate_excel_report",
+    ),
     path("weekly_expenses/", WeeklyExpensesView.as_view(), name="weekly_expenses"),
     path("monthly_expenses/", MonthlyExpensesView.as_view(), name="monthly_expenses"),
     path("weekly_incomes/", WeeklyIncomesView.as_view(), name="weekly_incomes"),
