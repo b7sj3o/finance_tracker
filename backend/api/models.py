@@ -22,13 +22,14 @@ class UserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = models.CharField(max_length=50,unique=True)
-    is_active = models.BooleanField(default=True)
-    is_staff = models.BooleanField(default=False)
-    email = models.EmailField(max_length=254)
     chat_id = models.IntegerField(unique=True,  null=True, blank=True)
     balance = models.FloatField(default=0)
-    objects = UserManager()
+    
+    is_active = models.BooleanField(default=True)
+    is_staff = models.BooleanField(default=False)
 
+    objects = UserManager()
+    
     USERNAME_FIELD = "username"
 
     def update_balance(self) -> float:
