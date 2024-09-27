@@ -34,6 +34,16 @@ from .aio_client import handle_api_request
 
 @dp.message(F.text == "/start")
 async def start(msg: Message, state: FSMContext):
+    """
+    Handles the /start command from the user.
+
+    Checks if the user exists in the database. If they do,
+    sends a welcome message; otherwise prompts the user to choose an action.
+
+    Parameters:
+    - msg (Message): The message object containing user data.
+    - state (FSMContext): The state of the finite state machine.
+    """
     user_exists = await validate_user_exists(msg.from_user.username)
     await msg.delete()
     if user_exists:
@@ -46,6 +56,13 @@ async def start(msg: Message, state: FSMContext):
 
 @dp.callback_query(F.data == "start")
 async def back_to_start(callback: CallbackQuery, state: FSMContext):
+    """
+    Resets the bot's state and presents the start keyboard again.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Welcome! Please choose an action:", reply_markup=get_start_keyboard()
     )
@@ -53,6 +70,13 @@ async def back_to_start(callback: CallbackQuery, state: FSMContext):
 
 @dp.callback_query(F.data == "report")
 async def report(callback: CallbackQuery, state: FSMContext):
+    """
+    Prompts the user to choose how they want to receive their report.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please choose how you'd like to receive your report or specify the format.",
         reply_markup=get_report_keyboard(),
@@ -61,6 +85,13 @@ async def report(callback: CallbackQuery, state: FSMContext):
 
 @dp.callback_query(F.data == "get_report")
 async def get_report(callback: CallbackQuery, state: FSMContext):
+    """
+    Generates and sends a CSV report to the user.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     file_path = generate_csv_report()
     try:
         with open(file_path, "rb") as file:
@@ -78,6 +109,13 @@ async def get_report(callback: CallbackQuery, state: FSMContext):
 
 @dp.callback_query(F.data == "view_expenses")
 async def view_expenses(callback: CallbackQuery, state: FSMContext):
+    """
+    Prompts the user to choose a period to view their expenses.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Choose the period to view expenses:",
         reply_markup=get_expense_period_keyboard(),
@@ -86,6 +124,13 @@ async def view_expenses(callback: CallbackQuery, state: FSMContext):
 
 @dp.callback_query(F.data == "add_expense")
 async def add_expense(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter expense details.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the expense details in the following format:\n\nAmount Description",
         reply_markup=get_back_to_start_keyboard(),
@@ -95,6 +140,15 @@ async def add_expense(callback: CallbackQuery, state: FSMContext):
 
 @dp.message(Expense.waiting_for_expense_details)
 async def process_expense_details(msg: Message, state: FSMContext):
+    """
+    Processes the entered expense details and validates them.
+
+    If valid, sends the data to the API to add the expense.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
     if not await validate_message_not_empty(msg.text):
         await msg.answer(
             "Input cannot be empty. Please provide the details.",
@@ -134,6 +188,13 @@ async def process_expense_details(msg: Message, state: FSMContext):
 
 @dp.callback_query(F.data == "update_expense")
 async def update_expense(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter the ID of the expense they want to update.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the ID of the expense you want to update, followed by the new details in the format:\n\nID Amount Description",
         reply_markup=get_back_to_start_keyboard(),
@@ -143,6 +204,15 @@ async def update_expense(callback: CallbackQuery, state: FSMContext):
 
 @dp.message(Expense.waiting_for_update_details)
 async def process_update_details(msg: Message, state: FSMContext):
+    """
+    Processes the entered update details for an expense.
+
+    Validates the ID and new details, then sends the update request to the API.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
     if not await validate_message_not_empty(msg.text):
         await msg.answer(
             "Input cannot be empty. Please provide the details.",
@@ -201,6 +271,13 @@ async def process_update_details(msg: Message, state: FSMContext):
 
 @dp.callback_query(F.data == "delete_expense")
 async def delete_expense(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter the ID of the expense they want to delete.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the ID of the expense you want to delete.",
         reply_markup=get_back_to_start_keyboard(),
@@ -210,17 +287,33 @@ async def delete_expense(callback: CallbackQuery, state: FSMContext):
 
 @dp.message(Expense.waiting_for_delete_id)
 async def process_delete_id(msg: Message, state: FSMContext):
-    expense_id = msg.text.strip()
+    """
+    Processes the entered ID for deletion of an expense.
+
+    Validates the ID and sends a delete request to the API.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
+    if not await validate_message_not_empty(msg.text):
+        await msg.answer(
+            "Input cannot be empty. Please provide the ID.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+        return
+
+    expense_id = msg.text
+    is_valid_id = await validate_expense_id(expense_id)
+    if not is_valid_id:
+        await msg.answer(
+            "Expense ID not found. Please check and try again.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+        return
+
     user_exists = await validate_user_exists(msg.from_user.username)
     if user_exists:
-        is_valid_id = await validate_expense_id(expense_id)
-        if not is_valid_id:
-            await msg.answer(
-                "Expense ID not found. Please check and try again.",
-                reply_markup=get_back_to_start_keyboard(),
-            )
-            return
-
         await handle_api_request(
             "DELETE",
             f"{API_ENDPOINT_EXPENSE}{expense_id}/",
@@ -236,16 +329,30 @@ async def process_delete_id(msg: Message, state: FSMContext):
     await state.clear()
 
 
-@dp.callback_query(F.data == "view_incomes")
-async def view_incomes(callback: CallbackQuery, state: FSMContext):
+@dp.callback_query(F.data == "view_income")
+async def view_income(callback: CallbackQuery, state: FSMContext):
+    """
+    Prompts the user to choose a period to view their income.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
-        "Choose the period to view incomes:",
+        "Choose the period to view income:",
         reply_markup=get_income_period_keyboard(),
     )
 
 
 @dp.callback_query(F.data == "add_income")
 async def add_income(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter income details.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the income details in the following format:\n\nAmount Description",
         reply_markup=get_back_to_start_keyboard(),
@@ -255,6 +362,15 @@ async def add_income(callback: CallbackQuery, state: FSMContext):
 
 @dp.message(Income.waiting_for_income_details)
 async def process_income_details(msg: Message, state: FSMContext):
+    """
+    Processes the entered income details and validates them.
+
+    If valid, sends the data to the API to add the income.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
     if not await validate_message_not_empty(msg.text):
         await msg.answer(
             "Input cannot be empty. Please provide the details.",
@@ -294,6 +410,13 @@ async def process_income_details(msg: Message, state: FSMContext):
 
 @dp.callback_query(F.data == "update_income")
 async def update_income(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter the ID of the income they want to update.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the ID of the income you want to update, followed by the new details in the format:\n\nID Amount Description",
         reply_markup=get_back_to_start_keyboard(),
@@ -302,7 +425,16 @@ async def update_income(callback: CallbackQuery, state: FSMContext):
 
 
 @dp.message(Income.waiting_for_update_details)
-async def process_income_update_details(msg: Message, state: FSMContext):
+async def process_update_income_details(msg: Message, state: FSMContext):
+    """
+    Processes the entered update details for an income.
+
+    Validates the ID and new details, then sends the update request to the API.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
     if not await validate_message_not_empty(msg.text):
         await msg.answer(
             "Input cannot be empty. Please provide the details.",
@@ -361,6 +493,13 @@ async def process_income_update_details(msg: Message, state: FSMContext):
 
 @dp.callback_query(F.data == "delete_income")
 async def delete_income(callback: CallbackQuery, state: FSMContext):
+    """
+    Guides the user to enter the ID of the income they want to delete.
+
+    Parameters:
+    - callback (CallbackQuery): The callback query object from the user.
+    - state (FSMContext): The state of the finite state machine.
+    """
     await callback.message.edit_text(
         "Please enter the ID of the income you want to delete.",
         reply_markup=get_back_to_start_keyboard(),
@@ -369,18 +508,34 @@ async def delete_income(callback: CallbackQuery, state: FSMContext):
 
 
 @dp.message(Income.waiting_for_delete_id)
-async def process_income_delete_id(msg: Message, state: FSMContext):
-    income_id = msg.text.strip()
+async def process_delete_income_id(msg: Message, state: FSMContext):
+    """
+    Processes the entered ID for deletion of an income.
+
+    Validates the ID and sends a delete request to the API.
+
+    Parameters:
+    - msg (Message): The message object containing user input.
+    - state (FSMContext): The state of the finite state machine.
+    """
+    if not await validate_message_not_empty(msg.text):
+        await msg.answer(
+            "Input cannot be empty. Please provide the ID.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+        return
+
+    income_id = msg.text
+    is_valid_id = await validate_income_id(income_id)
+    if not is_valid_id:
+        await msg.answer(
+            "Income ID not found. Please check and try again.",
+            reply_markup=get_back_to_start_keyboard(),
+        )
+        return
+
     user_exists = await validate_user_exists(msg.from_user.username)
     if user_exists:
-        is_valid_id = await validate_income_id(income_id)
-        if not is_valid_id:
-            await msg.answer(
-                "Income ID not found. Please check and try again.",
-                reply_markup=get_back_to_start_keyboard(),
-            )
-            return
-
         await handle_api_request(
             "DELETE",
             f"{API_ENDPOINT_INCOME}{income_id}/",
