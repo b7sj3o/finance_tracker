@@ -1,21 +1,17 @@
 # Вказуємо базовий образ
-FROM node:16 AS build
+FROM python:3.10-slim
 
 # Встановлюємо робочу директорію
 WORKDIR /app
 
 # Копіюємо package.json та package-lock.json
-COPY package*.json .
+COPY requirements.txt .
 
 # Встановлюємо залежності
-RUN npm install
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Копіюємо весь код
 COPY . .
 
-# Будуємо проект
-RUN npm run build
-
-
 # # Запускаємо додаток
-CMD ["npm", "run", "dev"]
+CMD ["python", "manage.py"]

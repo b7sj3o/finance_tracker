@@ -19,6 +19,11 @@ load_dotenv()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Create logs directory if it doesn't exist
+logs_directory = BASE_DIR.parent / "logs"
+if not logs_directory.exists():
+    logs_directory.mkdir(parents=True)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
@@ -152,7 +157,7 @@ LOGGING = {
         "file": {
             "level": "ERROR",
             "class": "logging.FileHandler",
-            "filename": os.path.join(os.path.dirname(BASE_DIR), "logs", "backend.log"),
+            "filename": logs_directory / "backend.log",
             "formatter": "verbose",
         },
         "console": {
