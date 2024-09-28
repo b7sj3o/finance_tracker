@@ -1,7 +1,6 @@
 from django.urls import path
 from .views import (
     UserCreateView,
-    LoginView,
     IncomeView,
     ExpenseView,
     CategoryView,
@@ -16,7 +15,6 @@ from .views import (
 
 urlpatterns = [
     path("register/", UserCreateView.as_view(), name="register_user"),
-    path("login/", LoginView.as_view(), name="login_user"),
     path("income/", IncomeView.as_view(), name="income"),
     path("income/<int:pk>/", IncomeView.as_view(), name="income"),
     path("expense/<int:pk>", ExpenseView.as_view(), name="expense"),
