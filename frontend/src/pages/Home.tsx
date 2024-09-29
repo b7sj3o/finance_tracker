@@ -2,6 +2,7 @@ import React from 'react';
 import { notification, userProfileIcon,dollar} from '../assets';
 import { data, COLORS } from '../assets/rechartsData';
 import { PieChart, Pie, Cell, Tooltip,Legend,} from 'recharts';
+import { ExampleInsightComponent } from '../components';
 
 const HomePage: React.FC = () => {
     return (
@@ -59,6 +60,7 @@ const HomePage: React.FC = () => {
                     </div>
                 </div>
             </div>
+            <ExampleInsightComponent/>
         </>
     )
 }
