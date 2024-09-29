@@ -13,6 +13,8 @@ RUN npm install
 # Копіюємо весь код
 COPY . .
 
+RUN chown -R node:node /app/node_modules
+
 # Будуємо проект
 RUN npm run build
 

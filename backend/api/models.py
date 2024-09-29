@@ -5,16 +5,15 @@ from decimal import Decimal
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, email=None, password=None):
-        if not username:
-            raise ValueError("Users must have a username")
-        user = self.model(username=username)
-        user.set_password(password)
+    def create_user(self, username, chat_id, **extra_fields):
+        if not chat_id:
+            raise ValueError("The Chat ID must be provided")
+        user = self.model(username=username, chat_id=chat_id, **extra_fields)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username, email=None, password=None):
-        user = self.create_user(username, email, password)
+    def create_superuser(self, username, email=None):
+        user = self.create_user(username, email)
         user.is_staff = True
         user.is_superuser = True
         user.save(using=self._db)
@@ -23,7 +22,7 @@ class UserManager(BaseUserManager):
 
 class User(AbstractUser):
     username = models.CharField(max_length=50, unique=True)
-    chat_id = models.IntegerField(unique=True, null=True, blank=True)
+    chat_id = models.CharField(max_length=300, unique=True, null=True, blank=True)
     balance = models.FloatField(default=0)
 
     is_active = models.BooleanField(default=True)

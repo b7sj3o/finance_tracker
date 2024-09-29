@@ -1,5 +1,5 @@
 """
-This module handles the routes for the Telegram bot.
+This module handles the routes  the Telegram bot.
 """
 
 import os

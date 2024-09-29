@@ -15,37 +15,17 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = User
-        fields = ["id", "username", "password"]
-        extra_kwargs = {"password": {"write_only": True}}
+        fields = ["id", "username", "chat_id"]
+        # extra_kwargs = {"password": {"write_only": True}}
 
     def create(self, validated_data):
         """
         Create a new user with the given validated data.
         """
         user = User.objects.create_user(
-            username=validated_data["username"], password=validated_data["password"]
+            username=validated_data["username"], chat_id=validated_data["chat_id"]
         )
         return user
-
-
-class LoginSerializer(serializers.Serializer):
-    """
-    Serializer for user login.
-    """
-
-    username = serializers.CharField()
-    password = serializers.CharField()
-
-    def validate(self, data):
-        """
-        Validate the login credentials.
-        """
-        user = authenticate(
-            username=data.get("username"), password=data.get("password")
-        )
-        if user is None:
-            raise serializers.ValidationError("Invalid credentials")
-        return {"user": user}
 
 
 class ExpenseSerializer(serializers.ModelSerializer):
@@ -55,14 +35,14 @@ class ExpenseSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Expense
-        fields = ["id", "amount", "description", "category"]
+        fields = ["id", "amount", "description", "category", "user"]
+        read_only_fields = ["user"]
 
     def create(self, validated_data):
         """
-        Create a new expense with the given validated data.
+        Create a new income with the given validated data.
         """
-        user = validated_data.pop("user")
-        return Expense.objects.create(user=user, **validated_data)
+        return Expense.objects.create(**validated_data)
 
 
 class IncomeSerializer(serializers.ModelSerializer):
@@ -72,7 +52,8 @@ class IncomeSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Income
-        fields = ["id", "amount", "description", "category"]
+        fields = ["id", "amount", "description", "category", "user"]
+        read_only_fields = ["user"]
 
     def create(self, validated_data):
         """
@@ -89,11 +70,11 @@ class CategorySerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Category
-        fields = ["id", "name"]
+        fields = ["id", "name", "user"]
+        read_only_fields = ["user"]
 
     def create(self, validated_data):
         """
-        Create a new category with the given validated data.
+        Create a new income with the given validated data.
         """
-        user = validated_data.pop("user")
-        return Category.objects.create(user=user, **validated_data)
+        return Category.objects.create(**validated_data)
