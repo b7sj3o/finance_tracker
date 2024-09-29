@@ -24,16 +24,21 @@ logs_directory = BASE_DIR.parent / "logs"
 if not logs_directory.exists():
     logs_directory.mkdir(parents=True)
 
+# Create reports directory if it doesn't exist
+reports_directory = BASE_DIR.parent / "reports"
+if not reports_directory.exists():
+    reports_directory.mkdir(parents=True)
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.getenv("SECRET_KEY")
+SECRET_KEY = os.getenv("SECRET_KEY_DJANGO")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["127.0.0.1", "0.0.0.0"]
 
 # Application definition
 

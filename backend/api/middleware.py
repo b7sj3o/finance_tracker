@@ -10,6 +10,7 @@ class ChatIDMiddleware:
 
     def __call__(self, request, *args, **kwargs):
         chat_id = request.GET.get("chat_id") or request.POST.get("chat_id")
+        
 
         if chat_id:
             try:
@@ -18,3 +19,4 @@ class ChatIDMiddleware:
                 request.user = None
 
         return self.get_response(request)
+

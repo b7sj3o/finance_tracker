@@ -8,22 +8,28 @@ from rest_framework.permissions import IsAuthenticated
 CONTENT_TYPE_JSON = "application/json"
 
 
-class UserFilteredMixin(generics.GenericAPIView):
-    """
-    Mixin to filter queryset by the current user.
-    """
+# class UserFilteredMixin(generics.GenericAPIView):
+#     """
+#     Mixin to filter queryset by the current user.
+#     """
 
-    def get_queryset(self):
-        """
-        Returns the queryset filtered by the current user.
-        """
-        return super().get_queryset().filter(user=self.request.user)
+#     def get_queryset(self):
+#         """
+#         Returns the queryset filtered by the current user.
+#         """
+#         print(self.request.user)
+#         response = super().get_queryset().filter(user=self.request.user)
+        
+#         try:
+#             return response
+#         except:
+#             return Response({"message": "user does not exist"}, status=status.HTTP_404_NOT_FOUND)
 
-    def perform_create(self, serializer):
-        """
-        Saves the serializer with the current user.
-        """
-        serializer.save(user=self.request.user)
+#     def perform_create(self, serializer):
+#         """
+#         Saves the serializer with the current user.
+#         """
+#         serializer.save(user=self.request.user)
 
 
 class ContentTypeValidationMixin:
