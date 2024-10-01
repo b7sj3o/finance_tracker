@@ -12,7 +12,7 @@ class AdminTest(TestCase):
         self.income_admin = TransferingAdmin(Income, self.site)
         self.expense_admin = TransferingAdmin(Expense, self.site)
         
-        self.user = User.objects.create_user(username="test_user", password="12345678")
+        self.user = User.objects.create_user(username="test_user",chat_id=111, password="12345678")
         self.category = Category.objects.create(user=self.user, name="Food")
 
         self.income = Income.objects.create(

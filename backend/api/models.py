@@ -5,17 +5,17 @@ from decimal import Decimal
 
 
 class UserManager(BaseUserManager):
-    def create_user(self, username, chat_id, **extra_fields):
+    def create_user(self, username, chat_id, password, **extra_fields):
         if not chat_id:
             raise ValueError("The Chat ID must be provided")
         user = self.model(username=username, chat_id=chat_id, **extra_fields)
+        user.set_password(password)
         user.save(using=self._db)
         return user
 
-    def create_superuser(self, username, email=None):
-        user = self.create_user(username, email)
-        user.is_staff = True
-        user.is_superuser = True
+    def create_superuser(self, username, email=None, password=None):
+        user = self.model(username=username, password=password, is_staff=True, is_superuser=True)
+        user.set_password(password)
         user.save(using=self._db)
         return user
 
@@ -50,7 +50,7 @@ class Category(models.Model):
     name = models.CharField(max_length=20)
 
     def __str__(self):
-        return f"{self.name} by {self.user}"
+        return f"{self.name.capitalize()}"
 
 
 class Income(models.Model):
