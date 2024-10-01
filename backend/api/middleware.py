@@ -1,6 +1,3 @@
-from rest_framework import status
-from rest_framework.response import Response
-
 from .models import User
 
 
@@ -15,7 +12,7 @@ class ChatIDMiddleware:
             try:
                 request.user = User.objects.get(chat_id=chat_id)
             except User.DoesNotExist:
-                request.user = None
+                pass
 
         return self.get_response(request)
 

@@ -13,11 +13,13 @@ from ..serializers import (
 )
 from ..mixins import (
     ContentTypeValidationMixin,
+    UserFilteredMixin
 )
 
 
 class BaseCRUDView(
     ContentTypeValidationMixin,
+    UserFilteredMixin,
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
@@ -36,7 +38,6 @@ class BaseCRUDView(
     def get(self, request, *args, **kwargs):
         if "pk" in kwargs:
             return self.retrieve(request, *args, **kwargs)
-        print(request.user)
         return self.list(request, *args, **kwargs)
 
     def post(self, request, *args, **kwargs):
@@ -56,8 +57,7 @@ class BaseCRUDView(
 
     def delete(self, request, *args, **kwargs):
         if "pk" in kwargs:
-            self.destroy(request, *args, **kwargs)
-            return Response({"message": "Item was deleted"}, status=status.HTTP_200_OK)
+            return self.destroy(request, *args, **kwargs)
         return self.list(request, *args, **kwargs)
 
 

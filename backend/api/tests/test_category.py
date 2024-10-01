@@ -6,20 +6,20 @@ from api.models import User, Category
 
 class CategoryTests(APITestCase):
     def setUp(self):
-        self.user = User.objects.create_user(username="test_user", password="12345678")
+        self.user = User.objects.create_user(username="test_user", chat_id=111, password="12345678")
         self.client.force_authenticate(user=self.user)
         self.category = Category.objects.create(user=self.user, name="Food")
         
     def test_create_category(self):
         url = reverse("category")
         data = {
-            "name": "Entertainment"
+            "name": "entertainment"
         }
         response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Category.objects.count(), 2)  # Include the initial category
-        self.assertEqual(Category.objects.latest('id').name, "Entertainment")
-        self.assertEqual(Category.objects.latest('id').__str__() , "Entertainment by test_user")
+        self.assertEqual(Category.objects.latest('id').name, "entertainment")
+        self.assertEqual(Category.objects.latest('id').__str__() , "Entertainment")
 
     def test_list_categories(self):
         url = reverse("category")
