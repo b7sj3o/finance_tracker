@@ -44,7 +44,9 @@ class ExpenseSerializer(serializers.ModelSerializer):
         """
         Create a new income with the given validated data.
         """
-        return Expense.objects.create(**validated_data)
+        
+        user = validated_data.pop("user")
+        return Expense.objects.create(user=user, **validated_data)
 
 
 class IncomeSerializer(serializers.ModelSerializer):
@@ -79,4 +81,5 @@ class CategorySerializer(serializers.ModelSerializer):
         """
         Create a new income with the given validated data.
         """
-        return Category.objects.create(**validated_data)
+        user = validated_data.pop("user")
+        return Category.objects.create(user=user, **validated_data)
