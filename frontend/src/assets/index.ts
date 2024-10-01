@@ -1,6 +1,13 @@
 import notification from './icons/notification.png';
 import reactLogo from './icons/react.svg';
 import dollar from './icons/icon-dollar-grey.svg';
+import bus from './icons/bus.png';
+import entertaiment from './icons/popcorn-box.png';
+import coin from './icons/earning.png';
+import utilities from './icons/electric-power.png';
+import shopping  from './icons/shopping-online.png';
+import food  from './icons/food.png';
+
 
 import graphAnalyticsIcon from './icons/navbar/graph-analysis.png'
 import homeIcon from './icons/navbar/home.png';
@@ -10,5 +17,5 @@ import plusIcon from './icons/navbar/plus.png';
 
 export { 
     notification, reactLogo, dollar,
-    graphAnalyticsIcon, homeIcon, transactionIcon, userProfileIcon, plusIcon 
+    graphAnalyticsIcon, homeIcon, transactionIcon, userProfileIcon, plusIcon,bus,entertaiment,coin,utilities,shopping,food
 };
