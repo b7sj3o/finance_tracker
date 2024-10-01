@@ -4,6 +4,7 @@ import {
   homeIcon,
   transactionIcon,
   plusIcon,
+  userProfileIcon,
 } from "../../assets";
 import NavButton from "./NavButton";
 
@@ -18,11 +19,16 @@ const NavBar: React.FC = () => {
             label="Insight"
             path="/insight"
           />
-          <NavButton icon={plusIcon} path="/add-transaction" />
+          <NavButton icon={plusIcon} path="/add-transaction"/>
           <NavButton
             icon={transactionIcon}
             label="Finance"
             path="/transactions"
+          />
+          <NavButton
+            icon={userProfileIcon }
+            label="Profile"
+            path="/insight"
           />
         </ul>
       </nav>
