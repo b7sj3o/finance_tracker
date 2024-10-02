@@ -1,7 +1,7 @@
 from .models_crud import (
     ExpenseView,
     IncomeView,
-    CategoryView
+    CategoryView,
 )
 from .user import (
     UserCreateView,
@@ -13,7 +13,7 @@ from .utils import (
     WeeklyExpensesView,
     WeeklyIncomesView,
     MonthlyExpensesView,
-    MonthlyIncomesView
+    MonthlyIncomesView,
 )
 
 
