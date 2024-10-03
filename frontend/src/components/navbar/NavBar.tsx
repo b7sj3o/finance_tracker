@@ -34,7 +34,7 @@ const NavBar: React.FC = () => {
             }
             path="/add-transaction"
             isActive={currentPath === "/add-transaction"}
-            isLarge // Додаємо прапорець для збільшення іконки
+            isLarge
           />
           <NavButton
             icon={currentPath === "/insight" ? activeGraphIcon : graphIcon}
