@@ -104,3 +104,5 @@ class MonthlyIncomesView(generics.RetrieveAPIView):
 
     def get(self, request, *args, **kwargs):
         return generate_transfers(request, Income, 30, args, kwargs)
+
+

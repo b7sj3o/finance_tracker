@@ -7,7 +7,7 @@ from decimal import Decimal
 class IncomeTests(APITestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(username="test_user", password="12345678")
+        self.user = User.objects.create_user(username="test_user", chat_id=111, password="12345678")
         self.category = Category.objects.create(name="Salary", user=self.user)
         self.client.force_authenticate(user=self.user)
 

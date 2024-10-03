@@ -28,7 +28,7 @@ const HomePage: React.FC = () => {
                 </div>
                 <div className="HomePage-balanceWrapper flex items-center justify-center w-[100%] mt-16">
                     <img className="w-[40px] h-[40px] " src={dollar} alt="Dollar sign" />
-                    <span className="HomePage-amount text-3xl font-[700] ">423,223452</span>
+                    <span className="HomePage-amount text-3xl font-[700] ">4243534523</span>
                 </div>
                 <div className="w-full flex justify-center">
                     <div className="flex flex-col items-center w-full">

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# TODO: run all tests
+
 clear
 
 echo "Starting bot tests..."

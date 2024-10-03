@@ -8,17 +8,25 @@ from decimal import Decimal
 class ExpenseTests(APITestCase):
 
     def setUp(self):
-        self.user = User.objects.create_user(username="test_user", password="12345678")
+        self.user = User.objects.create_user(username="test_user", chat_id=111, password="12345678")
         self.category = Category.objects.create(name="Rent", user=self.user)
         self.client.force_authenticate(user=self.user)
 
     def test_create_expense(self):
+        # ERROR - NOT ENOUGH BALANCE
         url = reverse("expense")
         data = {
             "amount": "300.00",
             "description": "Monthly Rent",
             "category": self.category.id
         }
+        response = self.client.post(url, data, format="json")
+        self.assertEqual(response.status_code, status.HTTP_405_METHOD_NOT_ALLOWED)
+        
+        # ADD SOME BALANCE
+        self.user.balance = 500
+        
+        # SUCCESS
         response = self.client.post(url, data, format="json")
         self.assertEqual(response.status_code, status.HTTP_201_CREATED)
         self.assertEqual(Expense.objects.count(), 1)
@@ -39,18 +47,6 @@ class ExpenseTests(APITestCase):
         self.assertEqual(len(response.data), 1)
 
     def test_retrieve_expense(self):
-        # BAD REQUEST
-        expense = Expense.objects.create(
-            user=self.user,
-            amount_hello="150.00",
-            description="Utilities",
-            category=self.category
-        )
-        url = reverse("expense", args=[expense.id])
-        response = self.client.get(url, format="json")
-        self.assertEqual(response.status_code, status.HTTP_400_BAD_REQUEST)
-        
-        # GOOD REQUEST
         expense = Expense.objects.create(
             user=self.user,
             amount="150.00",

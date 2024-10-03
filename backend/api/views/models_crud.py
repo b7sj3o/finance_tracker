@@ -13,10 +13,13 @@ from ..serializers import (
 )
 from ..mixins import (
     ContentTypeValidationMixin,
+    UserFilteredMixin
 )
+
 
 class BaseCRUDView(
     ContentTypeValidationMixin,
+    UserFilteredMixin,
     mixins.ListModelMixin,
     mixins.CreateModelMixin,
     mixins.RetrieveModelMixin,
@@ -54,8 +57,7 @@ class BaseCRUDView(
 
     def delete(self, request, *args, **kwargs):
         if "pk" in kwargs:
-            self.destroy(request, *args, **kwargs)
-            return Response({"message": "Item was deleted"}, status=status.HTTP_200_OK)
+            return self.destroy(request, *args, **kwargs)
         return self.list(request, *args, **kwargs)
 
 
@@ -73,9 +75,12 @@ class ExpenseView(BaseCRUDView):
                 status=status.HTTP_405_METHOD_NOT_ALLOWED,
             )
 
-        response = self.create(request, *args, **kwargs)
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+
         request.user.update_balance()
-        return response
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class IncomeView(BaseCRUDView):
@@ -83,11 +88,21 @@ class IncomeView(BaseCRUDView):
     serializer_class = IncomeSerializer
 
     def post(self, request, *args, **kwargs):
-        response = self.create(request, *args, **kwargs)
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+
         request.user.update_balance()
-        return response
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
 
 
 class CategoryView(BaseCRUDView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    
+    def post(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save(user=request.user)
+
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
