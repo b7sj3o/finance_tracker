@@ -19,6 +19,20 @@ const InsightModalWindow: React.FC<ModalProps> = ({
   const openTimeoutRef = useRef<number | null>(null);
   const closeTimeoutRef = useRef<number | null>(null);
 
+  const toggleEditForm = () => {
+    setIsDeleteConfirmVisible(false);
+    setIsEditFormVisible(!isEditFormVisible);
+  };
+
+  const toggleDeleteConfirm = () => {
+    setIsDeleteConfirmVisible(!isDeleteConfirmVisible);
+    setIsEditFormVisible(false);
+  };
+
+  const cancelDelete = () => {
+    setIsDeleteConfirmVisible(false);
+  };
+
   const toggleModal = () => {
     if (!isModalOpen) {
       setIsModalOpen(true);
@@ -61,20 +75,6 @@ const InsightModalWindow: React.FC<ModalProps> = ({
       }
     };
   }, [isModalOpen]);
-
-  const toggleEditForm = () => {
-    setIsDeleteConfirmVisible(false);
-    setIsEditFormVisible(!isEditFormVisible);
-  };
-
-  const toggleDeleteConfirm = () => {
-    setIsDeleteConfirmVisible(!isDeleteConfirmVisible);
-    setIsEditFormVisible(false);
-  };
-
-  const cancelDelete = () => {
-    setIsDeleteConfirmVisible(false);
-  };
 
   return (
     <section className={isModalOpen ? "" : "hidden"}>
