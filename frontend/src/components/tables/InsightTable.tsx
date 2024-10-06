@@ -14,27 +14,26 @@ import { Bar as BarChart } from "react-chartjs-2";
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 
 interface BarChartProps {
-  chartType: "income" | "expense"; // тип таблиці
+  chartType: "income" | "expense";
 }
 
 const BarChartComponent: React.FC<BarChartProps> = ({ chartType }) => {
   const data = {
-    labels: ["S", "M", "T", "W", "T", "F", "S"], // Дні тижня
+    labels: ["Sun", "Mon", "Tue", "Wen", "Thu", "Fri", "Sat"],
     datasets: [
       {
         label: chartType === "income" ? "Income" : "Expense",
-        data: [8000, 6000, 10509.09, 4000, 7000, 5000, 9000], // Приклад даних
+        data: [8000, 6000, 10509.09, 4000, 7000, 5000, 9000],
         backgroundColor: (context: any) => {
           const value = context.dataset.data[context.dataIndex];
           const maxValue = Math.max(...context.dataset.data);
 
-          // Логіка для зміни кольору найвищого стовпчика
           if (value === maxValue) {
             return chartType === "income"
               ? "rgba(75, 192, 192, 0.8)"
               : "rgba(255, 99, 132, 0.8)";
           }
-          return "rgba(201, 203, 207, 0.5)"; // Колір для решти стовпчиків
+          return "rgba(201, 203, 207, 0.5)";
         },
         borderRadius: 5,
         borderWidth: 1,
