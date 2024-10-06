@@ -1,30 +1,75 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ModalButton from "./modalButton";
 import ModalEditForm from "./forms/modalEditForm";
 import ModalDeleteConfirm from "./forms/modalDeleteConfirm";
 
 interface ModalProps {
   isModalOpen: boolean;
-  toggleModal: () => void;
-  isModalVisible: boolean;
+  setIsModalOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const InsightModalWindow: React.FC<ModalProps> = ({
   isModalOpen,
-  toggleModal,
-  isModalVisible,
+  setIsModalOpen,
 }) => {
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [isEditFormVisible, setIsEditFormVisible] = useState(false);
   const [isDeleteConfirmVisible, setIsDeleteConfirmVisible] = useState(false);
 
-  const toggleForm = () => {
+  const openTimeoutRef = useRef<number | null>(null);
+  const closeTimeoutRef = useRef<number | null>(null);
+
+  const toggleModal = () => {
+    if (!isModalOpen) {
+      setIsModalOpen(true);
+      setTimeout(() => setIsModalVisible(true), 10);
+    } else {
+      setIsModalVisible(false);
+      setTimeout(() => setIsModalOpen(false), 300);
+    }
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+
+      openTimeoutRef.current = setTimeout(() => {
+        setIsModalVisible(true);
+      }, 10);
+    } else {
+      if (openTimeoutRef.current) {
+        clearTimeout(openTimeoutRef.current);
+      }
+
+      setIsModalVisible(false);
+
+      setIsEditFormVisible(false);
+      setIsDeleteConfirmVisible(false);
+      closeTimeoutRef.current = setTimeout(() => {
+        setIsModalOpen(false);
+      }, 300);
+    }
+
+    return () => {
+      if (openTimeoutRef.current) {
+        clearTimeout(openTimeoutRef.current);
+      }
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, [isModalOpen]);
+
+  const toggleEditForm = () => {
     setIsDeleteConfirmVisible(false);
-    setIsFormVisible(!isFormVisible);
+    setIsEditFormVisible(!isEditFormVisible);
   };
 
   const toggleDeleteConfirm = () => {
-    setIsDeleteConfirmVisible(true);
-    setIsFormVisible(false);
+    setIsDeleteConfirmVisible(!isDeleteConfirmVisible);
+    setIsEditFormVisible(false);
   };
 
   const cancelDelete = () => {
@@ -74,7 +119,7 @@ const InsightModalWindow: React.FC<ModalProps> = ({
           <div className="mt-4 flex-row">
             <ModalButton
               label="Edit"
-              onClick={toggleForm}
+              onClick={toggleEditForm}
               className="bg-gray-900 hover:bg-gray-700 active:bg-slate-500 font-semibold"
             />
             <ModalButton
@@ -85,7 +130,7 @@ const InsightModalWindow: React.FC<ModalProps> = ({
           </div>
 
           {/* Edit Form */}
-          <ModalEditForm isFormVisible={isFormVisible} />
+          <ModalEditForm isFormVisible={isEditFormVisible} />
 
           {/* Delete Confirm */}
           <ModalDeleteConfirm

@@ -3,16 +3,9 @@ import { InsightModalWindow } from "./insightModal";
 
 const ExampleInsightComponent = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isModalVisible, setIsModalVisible] = useState(false);
 
   const toggleModal = () => {
-    if (!isModalOpen) {
-      setIsModalOpen(true);
-      setTimeout(() => setIsModalVisible(true), 10);
-    } else {
-      setIsModalVisible(false);
-      setTimeout(() => setIsModalOpen(false), 300);
-    }
+    setIsModalOpen(!isModalOpen);
   };
 
   return (
@@ -31,6 +24,7 @@ const ExampleInsightComponent = () => {
           <button
             className="w-full flex items-center justify-between mb-4 p-2 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500"
             onClick={toggleModal}
+            disabled={isModalOpen}
           >
             <div className="flex items-center">
               <div className="bg-blue-100 p-2 rounded-full">
@@ -86,8 +80,7 @@ const ExampleInsightComponent = () => {
       {/* Modal */}
       <InsightModalWindow
       isModalOpen={isModalOpen}
-      isModalVisible={isModalVisible}
-      toggleModal={toggleModal}
+      setIsModalOpen={setIsModalOpen}
       />
       
     </>
