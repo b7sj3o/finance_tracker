@@ -69,7 +69,7 @@ const AddTransaction = () => {
         </button>
       </div>
 
-      <div className="transaction__type-wrapper w-[70%] mx-auto mt-4 relative">
+      <div className="transaction__type-wrapper w-[70%] mx-auto mt-4 relative ">
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="mb-3 w-full px-4 py-2 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none"
@@ -85,7 +85,7 @@ const AddTransaction = () => {
         </button>
 
         {isOpen && (
-          <ul className=" mb-3 transaction__type-list relative mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg z-10">
+          <ul className=" mb-3 transaction__type-list relative mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg z-0 overflow-y-auto h-44">
             <li
               className="transaction__type-item flex justify-center items-center px-4 py-2 cursor-pointer hover:bg-gray-100 "
               onClick={() => handleSelectCategory({ name: "Restaurants", icon: food })}
@@ -129,7 +129,7 @@ const AddTransaction = () => {
             <input type="date" id="date" className="w-full px-4 py-2 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none mb-3" value={selectedDate} onChange={handleChange}/>
             <input type="text" placeholder="Description" className="w-full px-4 py-2 bg-white border border-gray-300 rounded-full shadow-sm focus:outline-none" />
       </div>
-      <button type="submit" className="transaction__confirmButton absolute bottom-[80px]  text-2xl bg-black text-white border border-gray-300 w-[90%] rounded-full shadow-sm focus:outline-none p-2">Confirm</button>
+      <button type="submit" className="transaction__confirmButton absolute bottom-[80px]  text-2xl bg-black text-white border border-gray-300 w-[90%] rounded-full shadow-sm focus:outline-none p-2 z-550">Confirm</button>
     </div>
   );
 };
