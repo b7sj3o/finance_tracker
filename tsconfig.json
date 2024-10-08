@@ -1,15 +1,11 @@
 {
-    "compilerOptions": {
-      "target": "ESNext",
-      "module": "ESNext",
-      "moduleResolution": "Node",
-      "jsx": "react-jsx",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.app.json"
     },
-    "include": ["frontend/src"],
-    "exclude": ["frontend/node_modules"]
-  }
-  
+    {
+      "path": "./tsconfig.node.json"
+    }
+  ]
+}
